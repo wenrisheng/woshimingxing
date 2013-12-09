@@ -30,6 +30,8 @@ typedef enum Position Position;
     
     MPMoviePlayerController *moviePlayer;
     AVAudioPlayer *audioPlayer;
+    
+    int currentTouPiaoNum;
 }
 @property (retain, nonatomic) IBOutlet UIView *mainView;
 
@@ -60,5 +62,6 @@ typedef enum Position Position;
 @property (retain, nonatomic) IBOutlet UIButton *rightButton;
 ////////////////////
 
+@property (retain, nonatomic) IBOutlet UIView *toupiaoEndView;
 
 @end

@@ -13,6 +13,7 @@
 #import "DongtaiCell.h"
 #import "GuanzhuCell.h"
 #import "MainViewController.h"
+#import "PublishDynaticViewController.h"
 @interface PleasureViewController ()
 
 @end
@@ -212,5 +213,10 @@
         default:
             break;
     }
+}
+- (IBAction)publicDynaticAction:(id)sender {
+    PublishDynaticViewController *publishDynaticVC=[[PublishDynaticViewController alloc]init];
+    [self.navigationController pushViewController:publishDynaticVC animated:YES];
+    [publishDynaticVC release];
 }
 @end

@@ -16,6 +16,8 @@
 #import "MyWalletViewController.h"
 #import "ApplyEnterViewController.h"
 #import "RecordAudioViewController.h"
+#import "MeViewController.h"
+#import "RegisterViewController.h"
 @implementation AppDelegate
 
 - (void)dealloc
@@ -38,21 +40,22 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
- //   MainViewController *root=[[MainViewController alloc]init];
-  //  BigSelectViewController *root=[[BigSelectViewController alloc]init];
-  //  root.isFirstVC=YES;
-  //  UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:test];
-    
+   
+    BigSelectViewController *rootVC=[[BigSelectViewController alloc]init];
+    rootVC.isFirstVC=YES;
+    UINavigationController *rooNav=[[UINavigationController alloc]initWithRootViewController:rootVC];
+    [rootVC release];
     //test
-   // PleasureViewController *test=[[PleasureViewController alloc]init];
+  //  PleasureViewController *test=[[PleasureViewController alloc]init];
   //  AccountManagerViewController *test=[[AccountManagerViewController alloc]init];
    // MyWalletViewController *test=[[MyWalletViewController alloc]init];
-    ApplyEnterViewController *test=[[ApplyEnterViewController alloc]init];
+  //  ApplyEnterViewController *test=[[ApplyEnterViewController alloc]init];
+    RegisterViewController *test=[[RegisterViewController alloc]init];
     RecordAudioViewController *recordVC=[[RecordAudioViewController alloc]init];
+   // MeViewController *test=[[MeViewController alloc]init];
        UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:test];
     self.window.rootViewController=nav;
-       //[root release];
-    [nav release];
+    [rooNav release];
     return YES;
 }
 

@@ -26,10 +26,12 @@
         // Custom initialization
         headImageArray=[[NSArray alloc]initWithObjects:@"head_0.png",@"head_1.png",@"head_2.png",@"head_3.png",@"head_4.png",@"head_5.png",@"head_6.png",@"head_7.png", nil];
         middleImageArray=[[NSArray alloc]initWithObjects:@"middle_0.png",@"middle_1.png",@"middle_2.png",@"middle_3.png",@"middle_4.png",@"middle_5.png",@"middle_6.png",@"middle_7.png", nil];
-         nameArray=[[NSArray alloc]initWithObjects:@"annie",@"张小妹",@"路红",@"彩霞",@"Jone",@"小龙女",@"Kate",@"夏利", nil];
+        nameArray=[[NSArray alloc]initWithObjects:@"annie",@"张小妹",@"路红",@"彩霞",@"Jone",@"小龙女",@"Kate",@"夏利", nil];
         
         currentIndex=0;
         currentPosition=MidPosition;
+        
+        currentTouPiaoNum=0;
     }
     return self;
 }
@@ -40,9 +42,9 @@
     // Do any additional setup after loading the view from its nib.
     //视频通知
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(didPlayMovieFinish:) name:MPMoviePlayerPlaybackDidFinishNotification object:moviePlayer];
-  
-/////////////////////////
-       }
+    
+    /////////////////////////
+}
 -(void)viewWillAppear:(BOOL)animated{
     self.hidesBottomBarWhenPushed=YES;
     
@@ -69,26 +71,27 @@
 }
 
 - (void)dealloc {
-
+    
     [headImageArray release];
     [middleImageArray release];
     [nameArray release];
     
-
-
-
+    
+    
+    
     [_leftToupiaoButton release];
     [_rightToupiaoButton release];
     [_leftButton release];
     [_rightButton release];
     [_leftView release];
     [_rightView release];
-
-
- 
+    
+    
+    
     [_mainView release];
     [_leftNameLabel release];
     [_rightNameLabel release];
+    [_toupiaoEndView release];
     [super dealloc];
 }
 
@@ -97,24 +100,24 @@
 }
 
 - (IBAction)leftButtonAction:(id)sender {
-
+    
     
     if (currentPosition==MidPosition) {
         currentPosition=LeftPosition;
-              ///////////////
+        ///////////////
         [self showContentOfPositionWihtAnimation];
     }else{
-    
+        
         currentPosition=MidPosition;
-       
+        
         [self showContentOfPositionWihtAnimation];
     }
-
-
+    
+    
 }
 
 - (IBAction)rightButtonAction:(id)sender {
-
+    
     if (currentPosition==MidPosition) {
         currentPosition=RightPosition;
         [self showContentOfPositionWihtAnimation];
@@ -122,14 +125,14 @@
         currentPosition=MidPosition;
         [self showContentOfPositionWihtAnimation];
     }
-
-
+    
+    
 }
 -(void)showContentOfPositionWihtAnimation{
     [UIView beginAnimations:Nil context:nil];
     [UIView setAnimationDuration:AnimationDuation];
     [self showContentViewOfPositionWithoutAnimation];
-       [UIView commitAnimations];
+    [UIView commitAnimations];
 }
 -(void)showContentViewOfPositionWithoutAnimation{
     
@@ -137,35 +140,35 @@
         case LeftPosition:
         {
             
-        _mainView.frame=CGRectMake(0, _mainView.frame.origin.y, _mainView.frame.size.width, _mainView.frame.size.height);
+            _mainView.frame=CGRectMake(0, _mainView.frame.origin.y, _mainView.frame.size.width, _mainView.frame.size.height);
             _leftToupiaoButton.alpha=1;
-        
+            
         }
             break;
         case MidPosition:
         {
-          
-           _mainView.frame=CGRectMake(-160, _mainView.frame.origin.y, _mainView.frame.size.width, _mainView.frame.size.height);
+            
+            _mainView.frame=CGRectMake(-160, _mainView.frame.origin.y, _mainView.frame.size.width, _mainView.frame.size.height);
             _leftToupiaoButton.alpha=0;
             _rightToupiaoButton.alpha=0;
         }
             break;
         case RightPosition:
         {
-           _mainView.frame=CGRectMake(-320, _mainView.frame.origin.y, _mainView.frame.size.width, _mainView.frame.size.height);
+            _mainView.frame=CGRectMake(-320, _mainView.frame.origin.y, _mainView.frame.size.width, _mainView.frame.size.height);
             _rightToupiaoButton.alpha=1;
-
+            
         }
             break;
         default:
             break;
     }
-
+    
 }
 - (IBAction)personInfoAction:(id)sender {
     ProfileViewController *profileVC=[[ProfileViewController alloc]init];
     if (currentPosition==LeftPosition) {
-      
+        
     }if (currentPosition==RightPosition) {
         
     }
@@ -185,30 +188,30 @@
     }if (currentPosition==RightPosition) {
         
     }
-
+    
 }
 
 - (IBAction)audioAction:(id)sender {
     UIButton *button=(UIButton *)sender;
     UIView *superView=button.superview;
-   
+    
     NSString *audioPath=nil;
     if (currentPosition==LeftPosition) {
-      audioPath=[[NSBundle mainBundle ]pathForResource:@"daolang" ofType:@"mp3"];
-       
+        audioPath=[[NSBundle mainBundle ]pathForResource:@"daolang" ofType:@"mp3"];
+        
     }if (currentPosition==RightPosition) {
-       audioPath=[[NSBundle mainBundle ]pathForResource:@"daolang" ofType:@"mp3"];
+        audioPath=[[NSBundle mainBundle ]pathForResource:@"daolang" ofType:@"mp3"];
     }
     moviePlayer=[[MPMoviePlayerController alloc]initWithContentURL:[NSURL fileURLWithPath:audioPath]];;
     moviePlayer.fullscreen=YES;
     if (currentPosition==LeftPosition) {
         moviePlayer.view.frame=CGRectMake(0, superView.frame.origin.y-50, 300, superView.frame.size.height);
- 
+        
     }if (currentPosition==RightPosition) {
         moviePlayer.view.frame=CGRectMake(340, superView.frame.origin.y-50, 300, superView.frame.size.height);
- 
+        
     }
-       moviePlayer.view.alpha=0.7;
+    moviePlayer.view.alpha=0.7;
     moviePlayer.view.layer.cornerRadius=5;
     [_mainView addSubview:moviePlayer.view];
     [moviePlayer play];
@@ -223,16 +226,35 @@
 - (IBAction)leftToupiaoAction:(id)sender {
     currentPosition=MidPosition;
     currentIndex++;
-    [self changStar:RightPosition];
+    currentTouPiaoNum++;
+    if (currentTouPiaoNum<10) {
+        [self changStar:RightPosition];
+    }else{
+        currentPosition=MidPosition;
+        [self showContentOfPositionWihtAnimation];
+        _toupiaoEndView.alpha=1;
+    }
+    
     
 }
 
 - (IBAction)rightToupiaoAction:(id)sender {
     currentPosition=MidPosition;
     currentIndex++;
-    [self changStar:LeftPosition];
+    currentTouPiaoNum++;
+    if (currentTouPiaoNum<10) {
+        [self changStar:LeftPosition];
+    }else{
+        currentPosition=MidPosition;
+        [self showContentOfPositionWihtAnimation];
+        _toupiaoEndView.alpha=1;
+    }
+    
 }
 -(void)changStar:(Position)position{
+    
+    
+    
     int imageIndex=currentIndex%8;
     [UIView animateWithDuration:AnimationDuation animations:^{
         [self showContentViewOfPositionWithoutAnimation];
@@ -242,10 +264,10 @@
             switch (position) {
                 case LeftPosition:
                 {
-                   _leftView.frame=CGRectMake(-160, _leftView.frame.origin.y, _leftView.frame.size.width, _leftView.frame.size.height);
+                    _leftView.frame=CGRectMake(-160, _leftView.frame.origin.y, _leftView.frame.size.width, _leftView.frame.size.height);
                 }
                     break;
-                   case RightPosition:
+                case RightPosition:
                 {
                     _rightView.frame=CGRectMake(480, _leftView.frame.origin.y, _leftView.frame.size.width, _leftView.frame.size.height);
                 }
@@ -253,14 +275,14 @@
                 default:
                     break;
             }
-           
+            
         } completion:^(BOOL finished) {
             //换内容
             [UIView animateWithDuration:AnimationDuation animations:^{
                 switch (position) {
                     case LeftPosition:
                     {
-                      [_leftButton setBackgroundImage:[UIImage imageNamed:[headImageArray objectAtIndex:imageIndex]] forState:UIControlStateNormal];
+                        [_leftButton setBackgroundImage:[UIImage imageNamed:[headImageArray objectAtIndex:imageIndex]] forState:UIControlStateNormal];
                         _leftNameLabel.text=[nameArray objectAtIndex:imageIndex];
                     }
                         break;
@@ -273,25 +295,25 @@
                     default:
                         break;
                 }
-              
+                
             } completion:^(BOOL finished) {
                 //移进
                 [UIView animateWithDuration:AnimationDuation animations:^{
                     switch (position) {
                         case LeftPosition:
                         {
-                           _leftView.frame=CGRectMake(0, _leftView.frame.origin.y, _leftView.frame.size.width, _leftView.frame.size.height);
+                            _leftView.frame=CGRectMake(0, _leftView.frame.origin.y, _leftView.frame.size.width, _leftView.frame.size.height);
                         }
                             break;
                         case RightPosition:
                         {
-                          _rightView.frame=CGRectMake(320, _leftView.frame.origin.y, _leftView.frame.size.width, _leftView.frame.size.height);
+                            _rightView.frame=CGRectMake(320, _leftView.frame.origin.y, _leftView.frame.size.width, _leftView.frame.size.height);
                         }
                             break;
                         default:
                             break;
                     }
-                   
+                    
                 } completion:^(BOOL finished) {
                     
                 }];
@@ -300,8 +322,8 @@
             
         }];
     }];
- 
-      }
+    
+}
 
 
 

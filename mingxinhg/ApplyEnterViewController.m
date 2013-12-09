@@ -55,13 +55,15 @@ typedef enum ResourceSource ResourceSource;
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    _xuanyanView.layer.cornerRadius=8;
+    _xianyanTextView.layer.cornerRadius=8;
     
     _profileView.layer.cornerRadius=CornerRadius;
     _vedioView.layer.cornerRadius=CornerRadius;
     _audioView.layer.cornerRadius=CornerRadius;
 }
-
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    [_xianyanTextView resignFirstResponder];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -73,7 +75,7 @@ typedef enum ResourceSource ResourceSource;
     [_profileView release];
     [_vedioView release];
     [_audioView release];
-    [_xuanyanView release];
+    [_xianyanTextView release];
     [super dealloc];
 }
 - (IBAction)backAction:(id)sender {

@@ -17,7 +17,8 @@
 @property (retain, nonatomic) IBOutlet UIView *profileView;
 @property (retain, nonatomic) IBOutlet UIView *vedioView;
 @property (retain, nonatomic) IBOutlet UIView *audioView;
-@property (retain, nonatomic) IBOutlet UIView *xuanyanView;
+
+@property (retain, nonatomic) IBOutlet UITextView *xianyanTextView;
 - (IBAction)uploadImageAction:(id)sender;
 - (IBAction)uploadVedioAction:(id)sender;
 
