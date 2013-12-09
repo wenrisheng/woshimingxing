@@ -18,6 +18,7 @@
 #import "RecordAudioViewController.h"
 #import "MeViewController.h"
 #import "RegisterViewController.h"
+#import "LoginViewController.h"
 @implementation AppDelegate
 
 - (void)dealloc

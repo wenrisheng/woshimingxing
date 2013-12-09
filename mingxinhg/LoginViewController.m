@@ -59,11 +59,9 @@
     [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];//"z"还可以是“x”“y”，表示沿z轴旋转
     rotationAnimation.toValue = [NSNumber numberWithFloat:(-6 * M_PI)];
     rotationAnimation.repeatCount=NSNotFound;
-    // 3 is the number of 360 degree rotations
-    // Make the rotation animation duration slightly less than the other animations to give it the feel
-    // that it pauses at its largest scale value
-    rotationAnimation.duration = 2.0f;
-    rotationAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]; //缓入缓出
+    
+    rotationAnimation.duration = AnimationDuration;
+    rotationAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]; //缓入缓出
     [_topImageView.layer addAnimation:rotationAnimation forKey:Nil];
 }
 
