@@ -14,6 +14,8 @@
 #import "PleasureViewController.h"
 #import "AccountManagerViewController.h"
 #import "MyWalletViewController.h"
+#import "ApplyEnterViewController.h"
+#import "RecordAudioViewController.h"
 @implementation AppDelegate
 
 - (void)dealloc
@@ -37,16 +39,19 @@
     [self.window makeKeyAndVisible];
     
  //   MainViewController *root=[[MainViewController alloc]init];
-    BigSelectViewController *root=[[BigSelectViewController alloc]init];
-    root.isFirstVC=YES;
-    UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:root];
+  //  BigSelectViewController *root=[[BigSelectViewController alloc]init];
+  //  root.isFirstVC=YES;
+  //  UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:test];
     
     //test
    // PleasureViewController *test=[[PleasureViewController alloc]init];
   //  AccountManagerViewController *test=[[AccountManagerViewController alloc]init];
-    MyWalletViewController *test=[[MyWalletViewController alloc]init];
-    self.window.rootViewController=root;
-       [root release];
+   // MyWalletViewController *test=[[MyWalletViewController alloc]init];
+    ApplyEnterViewController *test=[[ApplyEnterViewController alloc]init];
+    RecordAudioViewController *recordVC=[[RecordAudioViewController alloc]init];
+       UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:test];
+    self.window.rootViewController=nav;
+       //[root release];
     [nav release];
     return YES;
 }

@@ -14,6 +14,8 @@
 #import "MyWalletViewController.h"
 #import "GeneralSettingViewController.h"
 #import "MainViewController.h"
+
+
 @interface MeViewController ()
 
 @end
@@ -92,5 +94,6 @@
 }
 
 - (IBAction)logoutAction:(id)sender {
-}
+    
+    }
 @end

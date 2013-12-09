@@ -72,6 +72,11 @@
 		2B276077184DD4DA00EB1976 /* ProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B276076184DD4DA00EB1976 /* ProfileCell.m */; };
 		2B8AC30F184F3296008D8501 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B8AC30D184F3296008D8501 /* heart.png */; };
 		2B8AC310184F3296008D8501 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B8AC30E184F3296008D8501 /* info.png */; };
+		2BA5DB971852D4B200571F09 /* RecordVedioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA5DB951852D4B200571F09 /* RecordVedioViewController.m */; };
+		2BA5DB981852D4B200571F09 /* RecordVedioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BA5DB961852D4B200571F09 /* RecordVedioViewController.xib */; };
+		2BA5DB9A1852EE1200571F09 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA5DB991852EE1200571F09 /* MobileCoreServices.framework */; };
+		2BA5DB9C1852F7B400571F09 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA5DB9B1852F7B400571F09 /* AssetsLibrary.framework */; };
+		2BA5DB9F1853042600571F09 /* applyenter.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA5DB9E1853042600571F09 /* applyenter.png */; };
 		2BB44743184DB3BC0034635E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BB44742184DB3BC0034635E /* UIKit.framework */; };
 		2BB44745184DB3BC0034635E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BB44744184DB3BC0034635E /* Foundation.framework */; };
 		2BB44747184DB3BC0034635E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BB44746184DB3BC0034635E /* CoreGraphics.framework */; };
@@ -119,6 +124,13 @@
 		2BC6051D18506F73004DD11D /* nnn-20.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC6051818506F73004DD11D /* nnn-20.png */; };
 		2BC6051E18506F73004DD11D /* nnn-22.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC6051918506F73004DD11D /* nnn-22.png */; };
 		2BC6051F18506F73004DD11D /* nnn-21.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC6051A18506F73004DD11D /* nnn-21.png */; };
+		2BD96DAF18516C860068B9F0 /* UIImage+Compress.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD96DAE18516C860068B9F0 /* UIImage+Compress.m */; };
+		2BD96DB318517AE40068B9F0 /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BD96DB218517AE40068B9F0 /* libmp3lame.a */; };
+		2BD96DB718517CFF0068B9F0 /* RecordAudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD96DB518517CFF0068B9F0 /* RecordAudioViewController.m */; };
+		2BD96DB818517CFF0068B9F0 /* RecordAudioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BD96DB618517CFF0068B9F0 /* RecordAudioViewController.xib */; };
+		2BD96DBA18517DE50068B9F0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BD96DB918517DE50068B9F0 /* AVFoundation.framework */; };
+		2BD96DBC18517DF30068B9F0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BD96DBB18517DF30068B9F0 /* AudioToolbox.framework */; };
+		2BD96DC0185181830068B9F0 /* UIAlertView+ShowShortMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD96DBF185181830068B9F0 /* UIAlertView+ShowShortMessage.m */; };
 		2BEF666C184DE37900FFEEA4 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BEF666B184DE37900FFEEA4 /* ProfileCell.xib */; };
 		2BF92163184EC23500F36A30 /* huanyige.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF92161184EC23500F36A30 /* huanyige.png */; };
 		2BF92164184EC23500F36A30 /* touyipiao.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF92162184EC23500F36A30 /* touyipiao.png */; };
@@ -247,6 +259,12 @@
 		2B276076184DD4DA00EB1976 /* ProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileCell.m; sourceTree = "<group>"; };
 		2B8AC30D184F3296008D8501 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
 		2B8AC30E184F3296008D8501 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
+		2BA5DB941852D4B200571F09 /* RecordVedioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordVedioViewController.h; sourceTree = "<group>"; };
+		2BA5DB951852D4B200571F09 /* RecordVedioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordVedioViewController.m; sourceTree = "<group>"; };
+		2BA5DB961852D4B200571F09 /* RecordVedioViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordVedioViewController.xib; sourceTree = "<group>"; };
+		2BA5DB991852EE1200571F09 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		2BA5DB9B1852F7B400571F09 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		2BA5DB9E1853042600571F09 /* applyenter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = applyenter.png; sourceTree = "<group>"; };
 		2BB4473F184DB3BC0034635E /* mingxinhg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mingxinhg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BB44742184DB3BC0034635E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2BB44744184DB3BC0034635E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -306,6 +324,17 @@
 		2BC6051818506F73004DD11D /* nnn-20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nnn-20.png"; sourceTree = "<group>"; };
 		2BC6051918506F73004DD11D /* nnn-22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nnn-22.png"; sourceTree = "<group>"; };
 		2BC6051A18506F73004DD11D /* nnn-21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nnn-21.png"; sourceTree = "<group>"; };
+		2BD96DAD18516C860068B9F0 /* UIImage+Compress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Compress.h"; sourceTree = "<group>"; };
+		2BD96DAE18516C860068B9F0 /* UIImage+Compress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Compress.m"; sourceTree = "<group>"; };
+		2BD96DB118517AE40068B9F0 /* lame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lame.h; sourceTree = "<group>"; };
+		2BD96DB218517AE40068B9F0 /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
+		2BD96DB418517CFF0068B9F0 /* RecordAudioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordAudioViewController.h; sourceTree = "<group>"; };
+		2BD96DB518517CFF0068B9F0 /* RecordAudioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordAudioViewController.m; sourceTree = "<group>"; };
+		2BD96DB618517CFF0068B9F0 /* RecordAudioViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordAudioViewController.xib; sourceTree = "<group>"; };
+		2BD96DB918517DE50068B9F0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		2BD96DBB18517DF30068B9F0 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		2BD96DBE185181830068B9F0 /* UIAlertView+ShowShortMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+ShowShortMessage.h"; sourceTree = "<group>"; };
+		2BD96DBF185181830068B9F0 /* UIAlertView+ShowShortMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+ShowShortMessage.m"; sourceTree = "<group>"; };
 		2BEF666B184DE37900FFEEA4 /* ProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
 		2BF92161184EC23500F36A30 /* huanyige.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = huanyige.png; sourceTree = "<group>"; };
 		2BF92162184EC23500F36A30 /* touyipiao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = touyipiao.png; sourceTree = "<group>"; };
@@ -373,9 +402,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BA5DB9C1852F7B400571F09 /* AssetsLibrary.framework in Frameworks */,
+				2BA5DB9A1852EE1200571F09 /* MobileCoreServices.framework in Frameworks */,
+				2BD96DBC18517DF30068B9F0 /* AudioToolbox.framework in Frameworks */,
+				2BD96DBA18517DE50068B9F0 /* AVFoundation.framework in Frameworks */,
 				2B276074184DCEBB00EB1976 /* MediaPlayer.framework in Frameworks */,
 				2BB44743184DB3BC0034635E /* UIKit.framework in Frameworks */,
 				2BB44745184DB3BC0034635E /* Foundation.framework in Frameworks */,
+				2BD96DB318517AE40068B9F0 /* libmp3lame.a in Frameworks */,
 				2BB44747184DB3BC0034635E /* CoreGraphics.framework in Frameworks */,
 				2BB44749184DB3BC0034635E /* CoreData.framework in Frameworks */,
 			);
@@ -454,6 +488,7 @@
 		2B275FBD184DB43600EB1976 /* custom */ = {
 			isa = PBXGroup;
 			children = (
+				2BD96DBD185181730068B9F0 /* 短暂信息提示 */,
 				2BC604C718501B66004DD11D /* 垂直对齐label */,
 				2B276052184DBD0D00EB1976 /* tabbar */,
 				2B276051184DBD0300EB1976 /* 圆形view */,
@@ -464,6 +499,7 @@
 		2B275FBE184DB43D00EB1976 /* util */ = {
 			isa = PBXGroup;
 			children = (
+				2BD96DAC18516C2C0068B9F0 /* 压缩图片 */,
 			);
 			name = util;
 			sourceTree = "<group>";
@@ -593,6 +629,7 @@
 				2BF921B5184F021100F36A30 /* cccc-01.png */,
 				2BF9218C184ECC5200F36A30 /* yijieshu.png */,
 				2BF9218D184ECC5200F36A30 /* baomingzhong.png */,
+				2BA5DB9D1853040A00571F09 /* 报名参加 */,
 			);
 			name = "活动预告";
 			sourceTree = "<group>";
@@ -741,6 +778,14 @@
 			name = "个人空间";
 			sourceTree = "<group>";
 		};
+		2BA5DB9D1853040A00571F09 /* 报名参加 */ = {
+			isa = PBXGroup;
+			children = (
+				2BA5DB9E1853042600571F09 /* applyenter.png */,
+			);
+			name = "报名参加";
+			sourceTree = "<group>";
+		};
 		2BB44736184DB3BC0034635E = {
 			isa = PBXGroup;
 			children = (
@@ -761,6 +806,10 @@
 		2BB44741184DB3BC0034635E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2BA5DB9B1852F7B400571F09 /* AssetsLibrary.framework */,
+				2BA5DB991852EE1200571F09 /* MobileCoreServices.framework */,
+				2BD96DBB18517DF30068B9F0 /* AudioToolbox.framework */,
+				2BD96DB918517DE50068B9F0 /* AVFoundation.framework */,
 				2B276073184DCEBB00EB1976 /* MediaPlayer.framework */,
 				2BB44742184DB3BC0034635E /* UIKit.framework */,
 				2BB44744184DB3BC0034635E /* Foundation.framework */,
@@ -775,6 +824,7 @@
 			children = (
 				2BB44753184DB3BC0034635E /* AppDelegate.h */,
 				2BB44754184DB3BC0034635E /* AppDelegate.m */,
+				2BD96DB018517ACF0068B9F0 /* 音频转换 */,
 				2B275FBF184DB44600EB1976 /* base */,
 				2B275FBE184DB43D00EB1976 /* util */,
 				2B275FBD184DB43600EB1976 /* custom */,
@@ -901,12 +951,45 @@
 			name = "消息通知";
 			sourceTree = "<group>";
 		};
+		2BD96DAC18516C2C0068B9F0 /* 压缩图片 */ = {
+			isa = PBXGroup;
+			children = (
+				2BD96DAD18516C860068B9F0 /* UIImage+Compress.h */,
+				2BD96DAE18516C860068B9F0 /* UIImage+Compress.m */,
+			);
+			name = "压缩图片";
+			sourceTree = "<group>";
+		};
+		2BD96DB018517ACF0068B9F0 /* 音频转换 */ = {
+			isa = PBXGroup;
+			children = (
+				2BD96DB118517AE40068B9F0 /* lame.h */,
+				2BD96DB218517AE40068B9F0 /* libmp3lame.a */,
+			);
+			name = "音频转换";
+			sourceTree = "<group>";
+		};
+		2BD96DBD185181730068B9F0 /* 短暂信息提示 */ = {
+			isa = PBXGroup;
+			children = (
+				2BD96DBE185181830068B9F0 /* UIAlertView+ShowShortMessage.h */,
+				2BD96DBF185181830068B9F0 /* UIAlertView+ShowShortMessage.m */,
+			);
+			name = "短暂信息提示";
+			sourceTree = "<group>";
+		};
 		2BF92186184ECB6400F36A30 /* 报名参加 */ = {
 			isa = PBXGroup;
 			children = (
 				2BF92187184ECB7500F36A30 /* ApplyEnterViewController.h */,
 				2BF92188184ECB7500F36A30 /* ApplyEnterViewController.m */,
 				2BF92189184ECB7500F36A30 /* ApplyEnterViewController.xib */,
+				2BD96DB418517CFF0068B9F0 /* RecordAudioViewController.h */,
+				2BD96DB518517CFF0068B9F0 /* RecordAudioViewController.m */,
+				2BD96DB618517CFF0068B9F0 /* RecordAudioViewController.xib */,
+				2BA5DB941852D4B200571F09 /* RecordVedioViewController.h */,
+				2BA5DB951852D4B200571F09 /* RecordVedioViewController.m */,
+				2BA5DB961852D4B200571F09 /* RecordVedioViewController.xib */,
 			);
 			name = "报名参加";
 			sourceTree = "<group>";
@@ -983,6 +1066,7 @@
 				2BF9218F184ECC5200F36A30 /* baomingzhong.png in Resources */,
 				2B276026184DB95A00EB1976 /* 230 85 (1).png in Resources */,
 				2BF92163184EC23500F36A30 /* huanyige.png in Resources */,
+				2BA5DB9F1853042600571F09 /* applyenter.png in Resources */,
 				2BF92182184ECB6100F36A30 /* ActivityNoticeViewController.xib in Resources */,
 				2BC604F0185027FF004DD11D /* accountdakuang.png in Resources */,
 				2B27601B184DB78700EB1976 /* arrowright.png in Resources */,
@@ -1016,6 +1100,7 @@
 				2BC6051C18506F73004DD11D /* nnn-19.png in Resources */,
 				2BEF666C184DE37900FFEEA4 /* ProfileCell.xib in Resources */,
 				2B8AC310184F3296008D8501 /* info.png in Resources */,
+				2BA5DB981852D4B200571F09 /* RecordVedioViewController.xib in Resources */,
 				2BF921AC184ECCA500F36A30 /* yin.png in Resources */,
 				2B276048184DB97200EB1976 /* middle_5.png in Resources */,
 				2BB44757184DB3BC0034635E /* Default.png in Resources */,
@@ -1040,6 +1125,7 @@
 				2BF92174184EC8B800F36A30 /* toubg.png in Resources */,
 				2B276024184DB95A00EB1976 /* ee-14.png in Resources */,
 				2BF921CD184F209700F36A30 /* heng.png in Resources */,
+				2BD96DB818517CFF0068B9F0 /* RecordAudioViewController.xib in Resources */,
 				2BF921B0184ECCA500F36A30 /* shuxian.png in Resources */,
 				2BC604CF1850254E004DD11D /* MeViewController.xib in Resources */,
 				2BF92179184EC8B800F36A30 /* xingxing.png in Resources */,
@@ -1103,6 +1189,7 @@
 			files = (
 				2BF9216C184EC89800F36A30 /* PKViewController.m in Sources */,
 				2BB44751184DB3BC0034635E /* main.m in Sources */,
+				2BA5DB971852D4B200571F09 /* RecordVedioViewController.m in Sources */,
 				2BF92198184ECC7700F36A30 /* StarCell.m in Sources */,
 				2BF92181184ECB6100F36A30 /* ActivityNoticeViewController.m in Sources */,
 				2B275FD2184DB4CA00EB1976 /* MainViewController.m in Sources */,
@@ -1111,6 +1198,8 @@
 				2BC604CE1850254E004DD11D /* MeViewController.m in Sources */,
 				2BC604FC18502AA4004DD11D /* StarCityViewController.m in Sources */,
 				2B27604F184DB9CB00EB1976 /* ProfileViewController.m in Sources */,
+				2BD96DB718517CFF0068B9F0 /* RecordAudioViewController.m in Sources */,
+				2BD96DC0185181830068B9F0 /* UIAlertView+ShowShortMessage.m in Sources */,
 				2BF921C3184F10D600F36A30 /* GuanzhuCell.m in Sources */,
 				2B275FC2184DB45A00EB1976 /* BaseViewController.m in Sources */,
 				2B275FFA184DB5BD00EB1976 /* TabBarItem.m in Sources */,
@@ -1120,6 +1209,7 @@
 				2BC604C618501241004DD11D /* DongtaiTableCell.m in Sources */,
 				2BC6050618502ABE004DD11D /* GeneralSettingViewController.m in Sources */,
 				2BF921C1184F10D600F36A30 /* PleasureViewController.m in Sources */,
+				2BD96DAF18516C860068B9F0 /* UIImage+Compress.m in Sources */,
 				2B276055184DBD3200EB1976 /* UIView+toCircle.m in Sources */,
 				2BF9218A184ECB7500F36A30 /* ApplyEnterViewController.m in Sources */,
 				2B27606C184DCE0500EB1976 /* DetailImageViewController.m in Sources */,
@@ -1207,6 +1297,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "mingxinhg/mingxinhg-Prefix.pch";
 				INFOPLIST_FILE = "mingxinhg/mingxinhg-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/athudong/Documents/ios/项目/ios6/mingxinhg/mingxinhg",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1218,6 +1312,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "mingxinhg/mingxinhg-Prefix.pch";
 				INFOPLIST_FILE = "mingxinhg/mingxinhg-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/athudong/Documents/ios/项目/ios6/mingxinhg/mingxinhg",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

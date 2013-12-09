@@ -29,7 +29,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     _dongtaiNumLabel.layer.cornerRadius=CornerRadio;
-_guanzhuNumLabel.layer.cornerRadius=CornerRadio;
+    _guanzhuNumLabel.layer.cornerRadius=CornerRadio;
     _pinglunNumLabel.layer.cornerRadius=CornerRadio;
     _liwuNumLabel.layer.cornerRadius=CornerRadio;
     _xitongNumLabel.layer.cornerRadius=CornerRadio;

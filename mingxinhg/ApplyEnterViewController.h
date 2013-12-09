@@ -8,12 +8,19 @@
 
 #import "BaseViewController.h"
 
-@interface ApplyEnterViewController : BaseViewController
-
+@interface ApplyEnterViewController : BaseViewController<UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+{
+    UIImagePickerController *imagePickerController;
+    UIActionSheet *actionSheet;
+}
 - (IBAction)backAction:(id)sender;
 @property (retain, nonatomic) IBOutlet UIView *profileView;
 @property (retain, nonatomic) IBOutlet UIView *vedioView;
 @property (retain, nonatomic) IBOutlet UIView *audioView;
 @property (retain, nonatomic) IBOutlet UIView *xuanyanView;
+- (IBAction)uploadImageAction:(id)sender;
+- (IBAction)uploadVedioAction:(id)sender;
+
+- (IBAction)uploadMp3Action:(id)sender;
 
 @end
