@@ -83,11 +83,10 @@
     //旋转动画
     CABasicAnimation* rotationAnimation =
     [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];//"z"还可以是“x”“y”，表示沿z轴旋转
-    rotationAnimation.toValue = [NSNumber numberWithFloat:(-6 * M_PI)];
+    rotationAnimation.toValue = [NSNumber numberWithFloat:(6 * M_PI)];
     rotationAnimation.repeatCount=NSNotFound;
-
-    rotationAnimation.duration = AnimationDuration;
-    rotationAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]; //缓入缓出
+    rotationAnimation.duration = 4;
+    rotationAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
     [_topImageView.layer addAnimation:rotationAnimation forKey:Nil];
 }
 @end
