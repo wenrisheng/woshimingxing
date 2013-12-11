@@ -7,7 +7,7 @@
 //
 
 #import "RegisterViewController.h"
-
+#import <QuartzCore/QuartzCore.h>
 @interface RegisterViewController ()
 
 @end

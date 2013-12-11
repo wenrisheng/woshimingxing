@@ -19,6 +19,7 @@ enum PositionStatus{
 typedef enum PositionStatus PositionStatus;
 #import "BaseViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
+@class ASIHTTPRequest;
 @interface ProfileViewController : BaseViewController<UICollectionViewDataSource,UICollectionViewDelegate>
 {
     PositionStatus currentPosition;
@@ -30,7 +31,9 @@ typedef enum PositionStatus PositionStatus;
     NSArray *infoArray;
     
     MPMoviePlayerController *moviePlayer;
-    
+    ASIHTTPRequest *videoRequest;
+    unsigned long long Recordull;
+    BOOL isPlay;
 }
 @property (retain, nonatomic) IBOutlet UIImageView *personImageView;
 @property (retain, nonatomic) IBOutlet UICollectionView *collectionView1;
@@ -47,4 +50,5 @@ typedef enum PositionStatus PositionStatus;
 
 - (IBAction)button3Action:(id)sender;
 - (IBAction)backAction:(id)sender;
+@property (retain, nonatomic) IBOutlet UIButton *backButton;
 @end

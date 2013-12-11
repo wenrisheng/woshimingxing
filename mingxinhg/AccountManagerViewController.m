@@ -9,6 +9,7 @@
 #import "AccountManagerViewController.h"
 #import "UIView+toCircle.h"
 #import "MainViewController.h"
+#import <QuartzCore/QuartzCore.h>
 @interface AccountManagerViewController ()
 
 @end
@@ -33,6 +34,8 @@
     _editorButton.layer.borderColor=[[UIColor redColor] CGColor];
     _editorButton.layer.borderWidth=2;
     _editorButton.layer.cornerRadius=8;
+    
+     [_backButton setEnlargeEdge:ButtonEnargeEdge];
 }
 -(void)viewWillAppear:(BOOL)animated{
     self.hidesBottomBarWhenPushed=YES;
@@ -60,6 +63,7 @@
     [_scrollView release];
     [_personImageView release];
     [_editorButton release];
+    [_backButton release];
     [super dealloc];
 }
 - (IBAction)backAction:(id)sender {

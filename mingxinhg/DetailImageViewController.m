@@ -8,6 +8,7 @@
 
 #import "DetailImageViewController.h"
 #import "MainViewController.h"
+#import <QuartzCore/QuartzCore.h>
 @interface DetailImageViewController ()
 
 @end
@@ -28,6 +29,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     _contentView.layer.cornerRadius=4;
+    [_backButton setEnlargeEdge:ButtonEnargeEdge];
 }
 -(void)viewWillAppear:(BOOL)animated{
 
@@ -65,6 +67,7 @@
 }
 - (void)dealloc {
     [_contentView release];
+    [_backButton release];
     [super dealloc];
 }
 @end

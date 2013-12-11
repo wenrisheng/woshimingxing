@@ -28,6 +28,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [_pageControl addTarget:self action:@selector(pageControlAction:) forControlEvents:UIControlEventValueChanged];
+    [_backButton setEnlargeEdge:ButtonEnargeEdge];
 }
 -(void)viewDidAppear:(BOOL)animated{
     _scrollView.contentSize=CGSizeMake(320*4, _scrollView.frame.size.height);
@@ -68,6 +69,7 @@
 - (void)dealloc {
     [_scrollView release];
     [_pageControl release];
+    [_backButton release];
     [super dealloc];
 }
 @end

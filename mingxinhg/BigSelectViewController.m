@@ -37,6 +37,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
      [_piaoshuView toCircle];
+    
+    [_backButton setEnlargeEdge:ButtonEnargeEdge];
+    [_profileButton setEnlargeEdge:ButtonEnargeEdge];
+
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -51,6 +55,7 @@
 
     [super viewWillAppear:animated];
 }
+
 -(void)viewWillDisappear:(BOOL)animated{
     if (!_isFirstVC) {
         self.hidesBottomBarWhenPushed=NO;
@@ -82,6 +87,8 @@
     [_piaoshuView release];
     [_piaoshuLabel release];
    
+    [_profileButton release];
+    [_backButton release];
     [super dealloc];
 }
 - (IBAction)huanyigeButtonAction:(id)sender {

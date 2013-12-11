@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyWalletViewController">
             <connections>
+                <outlet property="backButton" destination="sPo-Jg-0UO" id="3T9-q7-RMN"/>
                 <outlet property="pageControl" destination="P0q-6g-S9J" id="8Kx-Hf-A6Z"/>
                 <outlet property="scrollView" destination="HKe-2w-Dx1" id="5gn-4Z-cot"/>
                 <outlet property="view" destination="1" id="3"/>

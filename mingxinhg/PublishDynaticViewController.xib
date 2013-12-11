@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PublishDynaticViewController">
             <connections>
                 <outlet property="addImageButton" destination="5DZ-aS-v93" id="SMf-nH-kQe"/>
+                <outlet property="backButton" destination="O9Z-DZ-0tg" id="tNz-rS-BIO"/>
                 <outlet property="scrollView" destination="hKf-kZ-p8N" id="4rA-3w-9Ug"/>
                 <outlet property="textView" destination="1Mh-lf-PQn" id="K3a-Xa-Fkh"/>
                 <outlet property="view" destination="1" id="3"/>

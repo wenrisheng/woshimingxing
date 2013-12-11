@@ -20,16 +20,19 @@
         _bgView=[[UIView alloc]initWithFrame:CGRectMake(0, 60, 90, 30)];
         [_bgView setBackgroundColor:[UIColor blackColor]];
         _contentLabel=[[UILabel alloc]initWithFrame:CGRectMake(10, 60, 90, 15)];
+        _contentLabel.backgroundColor=[UIColor clearColor];
         _contentLabel.textColor=[UIColor whiteColor];
         _contentLabel.font=[UIFont fontWithName:@"Arial" size:10];
         _xingImageView=[[UIImageView alloc]initWithFrame:CGRectMake(7, 75, 15, 15)];
         _xingImageView.image=[UIImage imageNamed:@"1111111-30.png"];
         _xingLabel=[[UILabel alloc]initWithFrame:CGRectMake(25, 75, 90, 15)];
+        _xingLabel.backgroundColor=[UIColor clearColor];
         _xingLabel.textColor=[UIColor whiteColor];
         _xingLabel.font=[UIFont fontWithName:@"Arial" size:10];
         _infoImageView=[[UIImageView alloc]initWithFrame:CGRectMake(45, 75, 15, 15)];
         _infoImageView.image=[UIImage imageNamed:@"1111111-31.png"];
         _infoLabel=[[UILabel alloc]initWithFrame:CGRectMake(65, 75, 90, 15)];
+        _infoLabel.backgroundColor=[UIColor clearColor];
         _infoLabel.textColor=[UIColor whiteColor];
         _infoLabel.font=[UIFont fontWithName:@"Arial" size:10];
         

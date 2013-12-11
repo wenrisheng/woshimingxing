@@ -7,6 +7,7 @@
 //
 
 #import "UIView+toCircle.h"
+#import <QuartzCore/QuartzCore.h>
 #define CIRCLERADIO self.frame.size.width*0.5
 @implementation UIView (toCircle)
 -(void)toCircle{

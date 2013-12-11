@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "MainViewController.h"
 #import "BigSelectViewController.h"
+#import "HTTPServer.h"
 
 //test
 #import "PleasureViewController.h"
@@ -29,7 +30,20 @@
     [_persistentStoreCoordinator release];
     [super dealloc];
 }
-
+- (void)startServer
+{
+    // Start the server (and check for problems)
+	
+	NSError *error;
+	if([httpServer start:&error])
+	{
+		NSLog(@"Started HTTP Server on port %hu", [httpServer listeningPort]);
+	}
+	else
+	{
+		NSLog(@"Error starting HTTP Server: %@", error);
+	}
+}
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
@@ -40,8 +54,21 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    //本地服务器
+    httpServer=[[HTTPServer alloc]init];
+    [httpServer setType:@"_http._tcp."];
+   [httpServer setPort:12345];
+    NSString *webPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Library/Private Documents/Temp"];
+    NSFileManager *fileManager=[NSFileManager defaultManager];
+    if(![fileManager fileExistsAtPath:webPath])
+    {
+        [fileManager createDirectoryAtPath:webPath withIntermediateDirectories:YES attributes:nil error:nil];
+    }
+	[httpServer setDocumentRoot:webPath];
     
-   
+    [self startServer];
+    
+    //根视图
     BigSelectViewController *rootVC=[[BigSelectViewController alloc]init];
     rootVC.isFirstVC=YES;
     UINavigationController *rooNav=[[UINavigationController alloc]initWithRootViewController:rootVC];
@@ -54,8 +81,8 @@
     RegisterViewController *test=[[RegisterViewController alloc]init];
     RecordAudioViewController *recordVC=[[RecordAudioViewController alloc]init];
    // MeViewController *test=[[MeViewController alloc]init];
-       UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:test];
-    self.window.rootViewController=nav;
+      // UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:rooNav];
+    self.window.rootViewController=rooNav;
     [rooNav release];
     return YES;
 }
@@ -70,11 +97,14 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    [httpServer stop];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    [self startServer];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application

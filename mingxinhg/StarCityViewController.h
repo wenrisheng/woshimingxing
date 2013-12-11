@@ -12,6 +12,9 @@
 {
     BOOL isLeftPosition;
 }
+
+@property (retain, nonatomic) IBOutlet UIButton *backButton;
+
 - (IBAction)backAction:(id)sender;
 - (IBAction)datailPropAction:(id)sender;
 @property (retain, nonatomic) IBOutlet UIScrollView *scrollView;

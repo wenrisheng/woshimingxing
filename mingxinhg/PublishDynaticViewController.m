@@ -7,7 +7,7 @@
 //
 
 #import "PublishDynaticViewController.h"
-
+#import <QuartzCore/QuartzCore.h>
 @interface PublishDynaticViewController ()
 
 @end
@@ -29,6 +29,8 @@
     // Do any additional setup after loading the view from its nib.
     _textView.layer.cornerRadius=6;
     _scrollView.layer.cornerRadius=6;
+    
+    [_backButton setEnlargeEdge:ButtonEnargeEdge];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,6 +46,7 @@
     [_textView release];
     [_addImageButton release];
     [_scrollView release];
+    [_backButton release];
     [super dealloc];
 }
 - (IBAction)addImageAction:(id)sender {

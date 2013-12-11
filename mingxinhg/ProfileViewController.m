@@ -11,6 +11,7 @@
 #import "DetailImageViewController.h"
 #import "ProfileCell.h"
 #import "MainViewController.h"
+#import "ASIHTTPRequest.h"
 #define MovieHeight 350
 @interface ProfileViewController ()
 
@@ -29,6 +30,7 @@
         xingArray=[[NSArray alloc]initWithObjects:@"12",@"12",@"12",@"12",@"12",@"12",@"12",@"12", nil];
         infoArray=[[NSArray alloc]initWithObjects:@"12",@"12",@"12",@"12",@"12",@"12",@"12",@"12", nil];
         currentPosition=ImagePosition;
+        isPlay=NO;
     }
     return self;
 }
@@ -48,12 +50,19 @@
     _collectionView2.tag=Vedio;
    
     
+    [_backButton setEnlargeEdge:ButtonEnargeEdge];
+    [_button1 setEnlargeEdge:ButtonEnargeEdge];
+    [_button2 setEnlargeEdge:ButtonEnargeEdge];
+    [_button3 setEnlargeEdge:ButtonEnargeEdge];
     
-
     
     
     //视频通知
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(didPlayMovieFinish:) name:MPMoviePlayerPlaybackDidFinishNotification object:moviePlayer];
+        [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(didPlaybackDidFinishReasonUserInfoKey:) name:MPMoviePlayerPlaybackDidFinishReasonUserInfoKey object:moviePlayer];
+}
+-(void)didPlaybackDidFinishReasonUserInfoKey:(MPMoviePlayerController *)mp{
+    NSLog(@"MPMoviePlayerPlaybackDidFinishReasonUserInfoKey");
 }
 -(void)viewWillAppear:(BOOL)animated{
 
@@ -102,6 +111,7 @@
     [_button2 release];
     [_button3 release];
     
+    [_backButton release];
     [super dealloc];
 }
 #pragma mark - UICollectionViewDataSource
@@ -178,11 +188,14 @@
             break;
         case Vedio:
         {
-            NSString *moviePath=[[NSBundle mainBundle ]pathForResource:@"MTV" ofType:@"mp4"];
-            moviePlayer=[[MPMoviePlayerController alloc]initWithContentURL:[NSURL fileURLWithPath:moviePath]];;
-            [moviePlayer play];
+          //  NSString *moviePath=[[NSBundle mainBundle ]pathForResource:@"MTV" ofType:@"mp4"];
+          //  [self videoPlay];
+            moviePlayer=[[MPMoviePlayerController alloc]initWithContentURL:[NSURL URLWithString:@"http://static.tripbe.com/videofiles/20121214/9533522808.f4v.mp4"]];
             moviePlayer.view.frame=CGRectMake(0, (UIScreenHeight-MovieHeight)*0.5, UIScreenWidth, MovieHeight);
             [self.view addSubview:moviePlayer.view];
+            [moviePlayer play];
+
+
         }
             break;
         default:
@@ -195,6 +208,11 @@
 }
 #pragma mark - 视频通知
 -(void)didPlayMovieFinish:(NSNotification *)notification{
+    if (videoRequest) {
+        isPlay = !isPlay;
+        [videoRequest clearDelegatesAndCancel];
+        videoRequest = nil;
+    }
     MPMoviePlayerController *player=[notification object];
     [player.view removeFromSuperview];
     [player release];
@@ -228,7 +246,7 @@
 }
 -(void)changDownView{
     [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:AnimationDuration];
+    [UIView setAnimationDuration:0.5];
     switch (currentPosition) {
         case ImagePosition:
         {
@@ -258,5 +276,54 @@
     }
     [UIView commitAnimations];
 }
+#pragma mark - 播放视频
+- (void)videoPlay{
+    NSString *webPath = [NSHomeDirectory()
+                         stringByAppendingPathComponent:@"Library/Private Documents/Temp"];
+    NSLog(@"web :%@",NSHomeDirectory());
+    NSString *cachePath = [NSHomeDirectory() stringByAppendingPathComponent:@"Library/Private Documents/Cache"];
+    NSFileManager *fileManager=[NSFileManager defaultManager];
+    if(![fileManager fileExistsAtPath:cachePath])
+    {
+        [fileManager createDirectoryAtPath:cachePath withIntermediateDirectories:YES attributes:nil error:nil];
+    }
+    if ([fileManager fileExistsAtPath:[cachePath stringByAppendingPathComponent:[NSString stringWithFormat:@"vedio.mp4"]]]) {
+        moviePlayer=[[MPMoviePlayerController alloc]initWithContentURL:[NSURL fileURLWithPath:[cachePath stringByAppendingPathComponent:[NSString stringWithFormat:@"vedio.mp4"]]]];;
+      
+        moviePlayer.view.frame=CGRectMake(0, (UIScreenHeight-MovieHeight)*0.5, UIScreenWidth, MovieHeight);
+          [moviePlayer play];
+        [self.view addSubview:moviePlayer.view];
+        videoRequest = nil;
+    }else{
+        ASIHTTPRequest *request=[[ASIHTTPRequest alloc] initWithURL:[NSURL URLWithString:@"http://static.tripbe.com/videofiles/20121214/9533522808.f4v.mp4"]];
+        //下载完存储目录
+        [request setDownloadDestinationPath:[cachePath stringByAppendingPathComponent:[NSString stringWithFormat:@"vedio.mp4"]]];
+        //临时存储目录
+        [request setTemporaryFileDownloadPath:[webPath stringByAppendingPathComponent:[NSString stringWithFormat:@"vedio.mp4"]]];
+        [request setBytesReceivedBlock:^(unsigned long long size, unsigned long long total) {
+            
+            NSLog(@"此次下载：%llu 总量：%llu",size,total);
+            NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+            [userDefaults setDouble:total forKey:@"file_length"];
+            Recordull += size;//Recordull全局变量，记录已下载的文件的大小
+            if (!isPlay&&Recordull > 400000) {
+                isPlay = !isPlay;
+                [self playVideo];
+            }
+        }];
+        //断点续载
+        [request setAllowResumeForFileDownloads:YES];
+        [request startAsynchronous];
+        videoRequest = request;
+    }
+}
+- (void)playVideo{
 
+    moviePlayer=[[MPMoviePlayerController alloc]initWithContentURL:[NSURL fileURLWithPath:[[NSHomeDirectory() stringByAppendingPathComponent:@"Library/Private Documents/Temp"] stringByAppendingPathComponent:[NSString stringWithFormat:@"vedio.mp4"]]]];;
+    moviePlayer.view.frame=CGRectMake(0, (UIScreenHeight-MovieHeight)*0.5, UIScreenWidth, MovieHeight);
+    [self.view addSubview:moviePlayer.view];
+       [moviePlayer play];
+    
+    
+  }
 @end

@@ -13,6 +13,9 @@
     UIImagePickerController *imagePickerController;
     UIActionSheet *actionSheet;
 }
+
+@property (retain, nonatomic) IBOutlet UIButton *backButton;
+
 - (IBAction)backAction:(id)sender;
 @property (retain, nonatomic) IBOutlet UIView *profileView;
 @property (retain, nonatomic) IBOutlet UIView *vedioView;

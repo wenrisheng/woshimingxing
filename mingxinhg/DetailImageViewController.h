@@ -9,6 +9,7 @@
 #import "BaseViewController.h"
 
 @interface DetailImageViewController : BaseViewController
+@property (retain, nonatomic) IBOutlet UIButton *backButton;
 - (IBAction)backAction:(id)sender;
 @property (retain, nonatomic) IBOutlet UIView *contentView;
 

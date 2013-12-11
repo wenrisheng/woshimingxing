@@ -21,6 +21,7 @@
         _bgView.alpha=0.6;
         [_bgView setBackgroundColor:[UIColor darkGrayColor]];
         _nameLabel=[[UILabel alloc]initWithFrame:CGRectMake(11, 85, 50, 20)];
+        _nameLabel.backgroundColor=[UIColor clearColor];
         _nameLabel.textColor=[UIColor whiteColor];
         _vImageView=[[UIImageView alloc]initWithFrame:CGRectMake(60, 70, 30, 30)];
         

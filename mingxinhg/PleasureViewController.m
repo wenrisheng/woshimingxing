@@ -44,7 +44,9 @@
       _collectionView1.tag=Dongtai;
     [_collectionView2 registerClass:[GuanzhuCell class] forCellWithReuseIdentifier:@"guanzhuCell"];
     _collectionView2.tag=Guanzhu;
-
+    self.hidesBottomBarWhenPushed=YES;
+    
+    [_publicDynaticButton setEnlargeEdge:ButtonEnargeEdge];
 }
 
 - (void)didReceiveMemoryWarning
@@ -70,6 +72,7 @@
     [_label1 release];
     [_label2 release];
     [_label3 release];
+    [_publicDynaticButton release];
     [super dealloc];
 }
 #pragma mark - UITableViewDataSource

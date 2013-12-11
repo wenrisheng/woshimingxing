@@ -47,6 +47,7 @@ typedef enum Position Position;
 
 
 - (IBAction)backAction:(id)sender;
+@property (retain, nonatomic) IBOutlet UIButton *backButton;
 
 - (IBAction)leftButtonAction:(id)sender;
 - (IBAction)rightButtonAction:(id)sender;

@@ -7,14 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ActivityNoticeViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate>
+#import "BaseViewController.h"
+@interface ActivityNoticeViewController : BaseViewController<UICollectionViewDataSource,UICollectionViewDelegate>
 {
     NSArray *bigImageNameArray;
     
     BOOL isLeft;
 }
 @property (retain, nonatomic) IBOutlet UICollectionView *collectionView;
+
+@property (retain, nonatomic) IBOutlet UIButton *backButton;
+
 - (IBAction)backAction:(id)sender;
 - (IBAction)leftButtonAction:(id)sender;
 - (IBAction)rightButtonAction:(id)sender;

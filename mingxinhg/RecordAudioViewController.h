@@ -23,6 +23,9 @@
 
     NSTimer *timer;
 }
+
+@property (retain, nonatomic) IBOutlet UIButton *backButton;
+
 - (IBAction)backAction:(id)sender;
 @property (retain, nonatomic) IBOutlet UILabel *timeLabel;
 @property (retain, nonatomic) IBOutlet UILabel *sizeLabel;

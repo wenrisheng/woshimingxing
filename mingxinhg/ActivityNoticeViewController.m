@@ -31,6 +31,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    [_backButton setEnlargeEdge:ButtonEnargeEdge];
+    
     UINib *cellNib = [UINib nibWithNibName:@"ActivityNoticeCell" bundle:nil];
     [self.collectionView registerNib:cellNib forCellWithReuseIdentifier:@"ActivityNoticeCell"];
 }
@@ -69,6 +72,7 @@
 
     [_leftLabel release];
     [_rightLabel release];
+    [_backButton release];
     [super dealloc];
 }
 #pragma mark - UICollectionViewDataSource

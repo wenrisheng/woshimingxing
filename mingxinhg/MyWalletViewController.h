@@ -9,6 +9,7 @@
 #import "BaseViewController.h"
 
 @interface MyWalletViewController : BaseViewController<UIScrollViewDelegate>
+@property (retain, nonatomic) IBOutlet UIButton *backButton;
 
 - (IBAction)backAction:(id)sender;
 @property (retain, nonatomic) IBOutlet UIScrollView *scrollView;

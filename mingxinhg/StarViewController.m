@@ -10,7 +10,7 @@
 
 #import "UIView+toCircle.h"
 #import "ProfileViewController.h"
-
+#import <QuartzCore/QuartzCore.h>
 #define NormalCellHeight 50
 
 
@@ -231,7 +231,7 @@
         [_table reloadData];
         _topButtonbgImageView.image=[UIImage imageNamed:@"righttopbutbg.png"];
         [UIView beginAnimations:nil context:nil];
-        [UIView setAnimationDuration:1];
+        [UIView setAnimationDuration:0.5];
         _juesaiTimeView.frame=CGRectMake(-320, _juesaiTimeView.frame.origin.y, _juesaiTimeView.frame.size.width, _juesaiTimeView.frame.size.height);
         _table.frame=CGRectMake(_table.frame.origin.x, _table.frame.origin.y-42, _table.frame.size.width, _table.frame.size.height+42);
         [UIView commitAnimations];
@@ -246,7 +246,7 @@
         isLeft=YES;
         _topButtonbgImageView.image=[UIImage imageNamed:@"lefttopbutbg.png"];
         [UIView beginAnimations:nil context:nil];
-        [UIView setAnimationDuration:1];
+        [UIView setAnimationDuration:0.5];
         _juesaiTimeView.frame=CGRectMake(0, _juesaiTimeView.frame.origin.y, _juesaiTimeView.frame.size.width, _juesaiTimeView.frame.size.height);
         _table.frame=CGRectMake(_table.frame.origin.x, _table.frame.origin.y+42, _table.frame.size.width, _table.frame.size.height-42);
         [UIView commitAnimations];

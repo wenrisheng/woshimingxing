@@ -27,8 +27,10 @@
 - (IBAction)touyipiaoButtonAction:(id)sender;
 @property (retain, nonatomic) IBOutlet UIView *piaoshuView;
 @property (retain, nonatomic) IBOutlet UILabel *piaoshuLabel;
+@property (retain, nonatomic) IBOutlet UIButton *backButton;
 
 - (IBAction)backAction:(id)sender;
+@property (retain, nonatomic) IBOutlet UIButton *profileButton;
 
 - (IBAction)profileAction:(id)sender;
 @end

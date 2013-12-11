@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
+@interface DetailActivityNoticeViewController : BaseViewController
+@property (retain, nonatomic) IBOutlet UIButton *backButton;
 
-@interface DetailActivityNoticeViewController : UIViewController
+
 - (IBAction)backAction:(id)sender;
 - (IBAction)enterAction:(id)sender;
 

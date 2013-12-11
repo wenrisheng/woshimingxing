@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailImageViewController">
             <connections>
+                <outlet property="backButton" destination="gjl-26-q7w" id="QN9-nK-Z9c"/>
                 <outlet property="contentView" destination="DaF-rv-CMz" id="wuq-TO-h6s"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
@@ -54,10 +55,15 @@
                     <rect key="frame" x="0.0" y="64" width="320" height="516"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <view alpha="0.49999999999999961" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tLK-kJ-mLa">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tLK-kJ-mLa">
                     <rect key="frame" x="0.0" y="518" width="320" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
+                        <view alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N3m-Pb-wem">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.37254902720451355" green="0.37254902720451355" blue="0.33725491166114807" alpha="1" colorSpace="deviceRGB"/>
+                        </view>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="quJ-5J-ILR">
                             <rect key="frame" x="46" y="0.0" width="30" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -101,7 +107,6 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" red="0.28627452254295349" green="0.24313727021217346" blue="0.26274511218070984" alpha="1" colorSpace="deviceRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="320" id="t0l-CO-LBX"/>
                         <constraint firstAttribute="height" constant="50" id="yQI-Is-prV"/>

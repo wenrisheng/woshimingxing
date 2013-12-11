@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InfoNoticeViewController">
             <connections>
+                <outlet property="backButton" destination="L9Y-Yt-LLC" id="seh-4F-mLy"/>
                 <outlet property="dongtaiNumLabel" destination="T42-6g-E5O" id="6bP-ym-Rek"/>
                 <outlet property="guanzhuNumLabel" destination="a2f-pm-6DS" id="OT3-xa-BIH"/>
                 <outlet property="liwuNumLabel" destination="xXo-rQ-XDY" id="Eme-qW-nq2"/>

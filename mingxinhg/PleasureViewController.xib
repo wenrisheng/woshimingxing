@@ -12,6 +12,7 @@
                 <outlet property="label1" destination="AlE-5A-kRF" id="KZh-M7-RUB"/>
                 <outlet property="label2" destination="CET-hs-8Lv" id="WZf-pE-wWV"/>
                 <outlet property="label3" destination="OPP-ws-xZQ" id="Szf-jv-DO5"/>
+                <outlet property="publicDynaticButton" destination="Mfl-Lc-TdC" id="w5l-Bu-8Uh"/>
                 <outlet property="scrollView" destination="qsk-nv-z9h" id="2VJ-Cd-ZIq"/>
                 <outlet property="topButbgImageView" destination="14r-Ii-GCY" id="25i-RZ-aGK"/>
                 <outlet property="view" destination="1" id="3"/>

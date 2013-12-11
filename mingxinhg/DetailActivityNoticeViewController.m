@@ -28,6 +28,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [_backButton setEnlargeEdge:ButtonEnargeEdge];
 }
 //-(void)viewWillAppear:(BOOL)animated{
 //    self.hidesBottomBarWhenPushed=YES;
@@ -60,5 +61,9 @@
     ApplyEnterViewController *applyEnterVC=[[ApplyEnterViewController alloc]init];
     [self.navigationController pushViewController:applyEnterVC animated:YES];
     [applyEnterVC release];
+}
+- (void)dealloc {
+    [_backButton release];
+    [super dealloc];
 }
 @end

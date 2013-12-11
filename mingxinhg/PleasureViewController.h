@@ -27,6 +27,8 @@ typedef enum PositionStatus PositionStatus;
     PositionStatus currentPosition;
 }
 - (IBAction)publicDynaticAction:(id)sender;
+@property (retain, nonatomic) IBOutlet UIButton *publicDynaticButton;
+
 @property (retain, nonatomic) IBOutlet UICollectionView *collectionView1;
 @property (retain, nonatomic) IBOutlet UICollectionView *collectionView2;
 @property (retain, nonatomic) IBOutlet UIScrollView *scrollView;

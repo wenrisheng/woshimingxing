@@ -8,6 +8,7 @@
 
 #import "InfoNoticeViewController.h"
 #import "MainViewController.h"
+#import <QuartzCore/QuartzCore.h>
 #define CornerRadio 6
 @interface InfoNoticeViewController ()
 
@@ -33,6 +34,8 @@
     _pinglunNumLabel.layer.cornerRadius=CornerRadio;
     _liwuNumLabel.layer.cornerRadius=CornerRadio;
     _xitongNumLabel.layer.cornerRadius=CornerRadio;
+    
+     [_backButton setEnlargeEdge:ButtonEnargeEdge];
 }
 -(void)viewWillAppear:(BOOL)animated{
     self.hidesBottomBarWhenPushed=YES;
@@ -55,6 +58,7 @@
     [_pinglunNumLabel release];
     [_liwuNumLabel release];
     [_xitongNumLabel release];
+    [_backButton release];
     [super dealloc];
 }
 - (IBAction)backAction:(id)sender {

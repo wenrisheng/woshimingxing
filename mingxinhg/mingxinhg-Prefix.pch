@@ -12,12 +12,7 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import <CoreData/CoreData.h>
+#import "CONSTANT.h"
 #endif
 
 
-#define SystemVersion [[UIDevice currentDevice] systemVersion].floatValue
-#define UIScreenWidth [[UIScreen mainScreen] bounds].size.width
-#define UIScreenHeight [[UIScreen mainScreen] bounds].size.height
-
-#define TabBarViewHight 50
-#define AnimationDuration 1

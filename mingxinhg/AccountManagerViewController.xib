@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AccountManagerViewController">
             <connections>
+                <outlet property="backButton" destination="bS1-02-hGA" id="PzL-pl-62a"/>
                 <outlet property="editorButton" destination="vOY-fP-NBT" id="vyF-J8-UIm"/>
                 <outlet property="personImageView" destination="8Nf-VJ-Dsc" id="rRd-Mo-OMQ"/>
                 <outlet property="scrollView" destination="2qq-Br-VT9" id="maB-7G-MP8"/>

@@ -10,6 +10,7 @@
 
 @interface InfoNoticeViewController : BaseViewController
 - (IBAction)backAction:(id)sender;
+@property (retain, nonatomic) IBOutlet UIButton *backButton;
 
 
 @property (retain, nonatomic) IBOutlet UILabel *dongtaiNumLabel;

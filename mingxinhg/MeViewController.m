@@ -15,7 +15,7 @@
 #import "GeneralSettingViewController.h"
 #import "MainViewController.h"
 
-
+#import <CoreGraphics/CoreGraphics.h>
 @interface MeViewController ()
 
 @end
@@ -38,10 +38,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [_personImageView toCircle];
-    _personLabel.layer.cornerRadius=10;
+
 }
 -(void)viewWillAppear:(BOOL)animated{
-    //  self.hidesBottomBarWhenPushed=YES;
+      self.hidesBottomBarWhenPushed=YES;
     
     MainViewController *mainVC=(MainViewController *)self.tabBarController;
     

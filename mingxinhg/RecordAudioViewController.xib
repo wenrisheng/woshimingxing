@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecordAudioViewController">
             <connections>
+                <outlet property="backButton" destination="Gud-gn-iVu" id="ere-mj-5OG"/>
                 <outlet property="pauseOrResumeButton" destination="fFJ-Vh-Tvp" id="i5s-6W-9I9"/>
                 <outlet property="playButton" destination="SpA-oM-BBC" id="zMJ-oM-AAE"/>
                 <outlet property="sizeLabel" destination="THP-P8-M0U" id="xGG-vJ-k6S"/>

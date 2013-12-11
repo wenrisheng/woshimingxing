@@ -30,6 +30,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+     [_backButton setEnlargeEdge:ButtonEnargeEdge];
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,6 +53,7 @@
     [_leftLabel release];
     [_rightLabel release];
     [_topButBgImageView release];
+    [_backButton release];
     [super dealloc];
 }
 - (IBAction)leftButtonAction:(id)sender {

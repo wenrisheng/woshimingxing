@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ApplyEnterViewController">
             <connections>
                 <outlet property="audioView" destination="pg8-HX-xkC" id="Fjz-lG-uCH"/>
+                <outlet property="backButton" destination="xVX-ZT-PRV" id="Boi-93-t7I"/>
                 <outlet property="profileView" destination="5lO-5f-EFH" id="gw8-kO-jCr"/>
                 <outlet property="vedioView" destination="QEp-n9-ezd" id="RUH-gT-zu4"/>
                 <outlet property="view" destination="1" id="3"/>

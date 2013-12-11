@@ -9,6 +9,9 @@
 #import "BaseViewController.h"
 
 @interface PublishDynaticViewController : BaseViewController<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+
+@property (retain, nonatomic) IBOutlet UIButton *backButton;
+
 - (IBAction)backAction:(id)sender;
 @property (retain, nonatomic) IBOutlet UITextView *textView;
 - (IBAction)addImageAction:(id)sender;

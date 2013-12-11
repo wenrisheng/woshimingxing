@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PKViewController">
             <connections>
+                <outlet property="backButton" destination="Mkx-5L-Ub4" id="MHe-sr-Dh4"/>
                 <outlet property="leftButton" destination="82A-cj-zDT" id="ktR-qU-9nh"/>
                 <outlet property="leftNameLabel" destination="eHg-4C-mN9" id="fKw-qW-IsH"/>
                 <outlet property="leftToupiaoButton" destination="85o-6E-rNo" id="kIm-mO-MjM"/>

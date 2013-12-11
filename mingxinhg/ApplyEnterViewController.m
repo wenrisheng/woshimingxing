@@ -38,16 +38,8 @@ typedef enum ResourceSource ResourceSource;
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        UIImage *image=[UIImage imageNamed:@"middle_7"];
-        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
-        NSString *vedioPath=[[NSBundle mainBundle]pathForResource:@"MTV" ofType:@"mp4"];
-     BOOL sa=   UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(vedioPath);
-        if (sa) {
-            NSLog(@"保存视频成功");
-        }else{
-              NSLog(@"保存视频失败");
-        }
-    }
+       
+          }
     return self;
 }
 
@@ -60,6 +52,8 @@ typedef enum ResourceSource ResourceSource;
     _profileView.layer.cornerRadius=CornerRadius;
     _vedioView.layer.cornerRadius=CornerRadius;
     _audioView.layer.cornerRadius=CornerRadius;
+    
+    [_backButton setEnlargeEdge:ButtonEnargeEdge];
 }
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
     [_xianyanTextView resignFirstResponder];
@@ -76,6 +70,7 @@ typedef enum ResourceSource ResourceSource;
     [_vedioView release];
     [_audioView release];
     [_xianyanTextView release];
+    [_backButton release];
     [super dealloc];
 }
 - (IBAction)backAction:(id)sender {
@@ -346,7 +341,7 @@ typedef enum ResourceSource ResourceSource;
         
         //将该图像保存到媒体库中
         image=[UIImage imageWithImageSimple:image scaledToSize:CGSizeMake(120.0, 120.0)];
-        UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), NULL);
+       // UIImageWriteToSavedPhotosAlbum(image, Nil, Nil, NULL);
         
     }else if ([mediaType isEqualToString:(NSString *)kUTTypeMovie])
         
@@ -383,6 +378,8 @@ typedef enum ResourceSource ResourceSource;
     }];
     [picker release];
 }
+
+    
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
     [picker dismissViewControllerAnimated:YES completion:^{
         NSLog(@"imagePickerControllerDidCancel");

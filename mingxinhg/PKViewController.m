@@ -40,6 +40,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    [_backButton setEnlargeEdge:ButtonEnargeEdge];
+    
     //视频通知
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(didPlayMovieFinish:) name:MPMoviePlayerPlaybackDidFinishNotification object:moviePlayer];
     
@@ -92,6 +95,7 @@
     [_leftNameLabel release];
     [_rightNameLabel release];
     [_toupiaoEndView release];
+    [_backButton release];
     [super dealloc];
 }
 
