@@ -7,7 +7,7 @@
 //
 
 #import "StarViewController.h"
-
+#import "MainViewController.h"
 #import "UIView+toCircle.h"
 #import "ProfileViewController.h"
 #import <QuartzCore/QuartzCore.h>
@@ -56,16 +56,21 @@
     [_jingcaiBgView addGestureRecognizer:tapGesture];
     [tapGesture release];
 
+}
+-(void)viewWillAppear:(BOOL)animated{
+      self.tabBarController.tabBar.hidden=YES;
+     [super viewWillAppear:animated];
+     [self HideTabBar:YES];
+    MainViewController *mainVC=(MainViewController *)self.tabBarController;
     
+    UIView *tabBarView=mainVC.tabBarView;
+    tabBarView.frame=CGRectMake(0, UIScreenHeight-TabBarViewHight, tabBarView.frame.size.width,TabBarViewHight);
+   
 }
 -(void)tapAction:(id)sender{
     _jingcaiView.alpha=0;
 }
--(void)viewWillAppear:(BOOL)animated{
-    self.hidesBottomBarWhenPushed=YES;
-    
-    [super viewWillAppear:animated];
-}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

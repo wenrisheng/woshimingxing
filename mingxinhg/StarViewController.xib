@@ -502,8 +502,8 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gFV-ho-I5s">
-                    <rect key="frame" x="33" y="151" width="255" height="97"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gFV-ho-I5s">
+                    <rect key="frame" x="33" y="236" width="255" height="97"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="对不起，您的星币余额不足！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JA8-uB-7Tq">
@@ -547,12 +547,18 @@
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.83137261867523193" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="97" id="AKJ-RF-LzL"/>
+                        <constraint firstAttribute="width" constant="255" id="f9v-DL-5h9"/>
+                    </constraints>
                 </view>
             </subviews>
             <constraints>
                 <constraint firstItem="45A-CE-SMS" firstAttribute="leading" secondItem="L9M-rN-0mD" secondAttribute="leading" id="7kD-AQ-g8U"/>
                 <constraint firstAttribute="trailing" secondItem="45A-CE-SMS" secondAttribute="trailing" id="G55-dA-qTQ"/>
                 <constraint firstAttribute="bottom" secondItem="45A-CE-SMS" secondAttribute="bottom" id="QBt-xY-N9n"/>
+                <constraint firstAttribute="centerY" secondItem="gFV-ho-I5s" secondAttribute="centerY" id="U96-Sk-Rkp"/>
+                <constraint firstAttribute="centerX" secondItem="gFV-ho-I5s" secondAttribute="centerX" id="hJ5-9O-G9V"/>
                 <constraint firstItem="45A-CE-SMS" firstAttribute="top" secondItem="L9M-rN-0mD" secondAttribute="top" id="qbb-bk-za6"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

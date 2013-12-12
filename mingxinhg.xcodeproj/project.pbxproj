@@ -36,6 +36,7 @@
 		2B117B181855B64C007F76BE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B117B171855B64C007F76BE /* QuartzCore.framework */; };
 		2B117B1D1855BD00007F76BE /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B117B1B1855BD00007F76BE /* LoginViewController.m */; };
 		2B117B1E1855BD00007F76BE /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B117B1C1855BD00007F76BE /* LoginViewController.xib */; };
+		2B22DC1E1859BA5100C54A0A /* MTV.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2B22DC1D1859BA5000C54A0A /* MTV.mp4 */; };
 		2B275FC2184DB45A00EB1976 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B275FC1184DB45A00EB1976 /* BaseViewController.m */; };
 		2B275FCE184DB4AD00EB1976 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B275FCC184DB4AD00EB1976 /* FindViewController.m */; };
 		2B275FCF184DB4AD00EB1976 /* FindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B275FCD184DB4AD00EB1976 /* FindViewController.xib */; };
@@ -172,11 +173,10 @@
 		2BD96DC0185181830068B9F0 /* UIAlertView+ShowShortMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD96DBF185181830068B9F0 /* UIAlertView+ShowShortMessage.m */; };
 		2BEF666C184DE37900FFEEA4 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BEF666B184DE37900FFEEA4 /* ProfileCell.xib */; };
 		2BF40D331858037E009097B4 /* UIButton+EnlargeEdge.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF40D321858037E009097B4 /* UIButton+EnlargeEdge.m */; };
-		2BF40D371858555E009097B4 /* vedio.flv in Resources */ = {isa = PBXBuildFile; fileRef = 2BF40D361858555E009097B4 /* vedio.flv */; };
 		2BF92163184EC23500F36A30 /* huanyige.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF92161184EC23500F36A30 /* huanyige.png */; };
 		2BF92164184EC23500F36A30 /* touyipiao.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF92162184EC23500F36A30 /* touyipiao.png */; };
 		2BF92167184EC83A00F36A30 /* daolang.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2BF92165184EC83A00F36A30 /* daolang.mp3 */; };
-		2BF92168184EC83A00F36A30 /* MTV.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2BF92166184EC83A00F36A30 /* MTV.mp4 */; };
+		2BF92168184EC83A00F36A30 /* MTV888.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2BF92166184EC83A00F36A30 /* MTV888.mp4 */; };
 		2BF9216C184EC89800F36A30 /* PKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF9216A184EC89800F36A30 /* PKViewController.m */; };
 		2BF9216D184EC89800F36A30 /* PKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BF9216B184EC89800F36A30 /* PKViewController.xib */; };
 		2BF92174184EC8B800F36A30 /* toubg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF9216E184EC8B800F36A30 /* toubg.png */; };
@@ -259,6 +259,7 @@
 		2B117B1A1855BD00007F76BE /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		2B117B1B1855BD00007F76BE /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		2B117B1C1855BD00007F76BE /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		2B22DC1D1859BA5000C54A0A /* MTV.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = MTV.mp4; sourceTree = "<group>"; };
 		2B275FC0184DB45A00EB1976 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		2B275FC1184DB45A00EB1976 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		2B275FCB184DB4AD00EB1976 /* FindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindViewController.h; sourceTree = "<group>"; };
@@ -423,11 +424,10 @@
 		2BF40D311858037E009097B4 /* UIButton+EnlargeEdge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+EnlargeEdge.h"; sourceTree = "<group>"; };
 		2BF40D321858037E009097B4 /* UIButton+EnlargeEdge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+EnlargeEdge.m"; sourceTree = "<group>"; };
 		2BF40D3518581342009097B4 /* CONSTANT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CONSTANT.h; sourceTree = "<group>"; };
-		2BF40D361858555E009097B4 /* vedio.flv */ = {isa = PBXFileReference; lastKnownFileType = file; path = vedio.flv; sourceTree = "<group>"; };
 		2BF92161184EC23500F36A30 /* huanyige.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = huanyige.png; sourceTree = "<group>"; };
 		2BF92162184EC23500F36A30 /* touyipiao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = touyipiao.png; sourceTree = "<group>"; };
 		2BF92165184EC83A00F36A30 /* daolang.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = daolang.mp3; sourceTree = "<group>"; };
-		2BF92166184EC83A00F36A30 /* MTV.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = MTV.mp4; sourceTree = "<group>"; };
+		2BF92166184EC83A00F36A30 /* MTV888.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = MTV888.mp4; sourceTree = "<group>"; };
 		2BF92169184EC89800F36A30 /* PKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKViewController.h; sourceTree = "<group>"; };
 		2BF9216A184EC89800F36A30 /* PKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKViewController.m; sourceTree = "<group>"; };
 		2BF9216B184EC89800F36A30 /* PKViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PKViewController.xib; sourceTree = "<group>"; };
@@ -1042,8 +1042,8 @@
 				2B275FBC184DB41200EB1976 /* 我 */,
 				2BB4475C184DB3BC0034635E /* mingxinhg.xcdatamodeld */,
 				2BF92165184EC83A00F36A30 /* daolang.mp3 */,
-				2BF40D361858555E009097B4 /* vedio.flv */,
-				2BF92166184EC83A00F36A30 /* MTV.mp4 */,
+				2B22DC1D1859BA5000C54A0A /* MTV.mp4 */,
+				2BF92166184EC83A00F36A30 /* MTV888.mp4 */,
 				2BB3938718571ECD00F1362F /* Images.xcassets */,
 				2BB4474B184DB3BC0034635E /* Supporting Files */,
 			);
@@ -1301,6 +1301,7 @@
 				2B276026184DB95A00EB1976 /* 230 85 (1).png in Resources */,
 				2BF92163184EC23500F36A30 /* huanyige.png in Resources */,
 				2BA5DB9F1853042600571F09 /* applyenter.png in Resources */,
+				2B22DC1E1859BA5100C54A0A /* MTV.mp4 in Resources */,
 				2BF92182184ECB6100F36A30 /* ActivityNoticeViewController.xib in Resources */,
 				2BC604F0185027FF004DD11D /* accountdakuang.png in Resources */,
 				2B27601B184DB78700EB1976 /* arrowright.png in Resources */,
@@ -1316,7 +1317,6 @@
 				2B276064184DCD9F00EB1976 /* 010000-29.png in Resources */,
 				2B276060184DCD9F00EB1976 /* mid.png in Resources */,
 				2B27601A184DB78700EB1976 /* lefttopbutbg.png in Resources */,
-				2BF40D371858555E009097B4 /* vedio.flv in Resources */,
 				2BF921AB184ECCA500F36A30 /* jin.png in Resources */,
 				2B276025184DB95A00EB1976 /* ee-15.png in Resources */,
 				2BF921B1184ECCA500F36A30 /* dollar.png in Resources */,
@@ -1422,7 +1422,7 @@
 				2B276062184DCD9F00EB1976 /* 1111111-30.png in Resources */,
 				2B276044184DB97200EB1976 /* middle_1.png in Resources */,
 				2BF921B3184ECCA500F36A30 /* playvedio.png in Resources */,
-				2BF92168184EC83A00F36A30 /* MTV.mp4 in Resources */,
+				2BF92168184EC83A00F36A30 /* MTV888.mp4 in Resources */,
 				2BC60512185066A1004DD11D /* ccc-17.png in Resources */,
 				2BC604D818502625004DD11D /* me_2.png in Resources */,
 				2B117B111855AEB8007F76BE /* renren.png in Resources */,

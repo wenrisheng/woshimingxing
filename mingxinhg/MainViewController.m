@@ -34,6 +34,8 @@
     
     [self initViewControllers];
     [self initTabBarView];
+    
+
 }
 -(void)initViewControllers{
     
@@ -143,6 +145,7 @@
     self.selectedIndex=tag;
     selectButton=button;
 }
+
 #pragma mark - UINavigationBarDelegate
 
 @end

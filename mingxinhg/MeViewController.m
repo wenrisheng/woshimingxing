@@ -14,8 +14,8 @@
 #import "MyWalletViewController.h"
 #import "GeneralSettingViewController.h"
 #import "MainViewController.h"
-
 #import <CoreGraphics/CoreGraphics.h>
+#import <QuartzCore/QuartzCore.h>
 @interface MeViewController ()
 
 @end
@@ -39,16 +39,17 @@
     // Do any additional setup after loading the view from its nib.
     [_personImageView toCircle];
     _personLabel.layer.cornerRadius=6;
-
+    
 }
 -(void)viewWillAppear:(BOOL)animated{
-
-    
+   [super viewWillAppear:animated];
+    self.hidesBottomBarWhenPushed=YES;
+    [self HideTabBar:YES];
     MainViewController *mainVC=(MainViewController *)self.tabBarController;
     
     UIView *tabBarView=mainVC.tabBarView;
     tabBarView.frame=CGRectMake(0, UIScreenHeight-TabBarViewHight, tabBarView.frame.size.width,TabBarViewHight);
-    [super viewWillAppear:animated];
+ 
 }
 - (void)didReceiveMemoryWarning
 {

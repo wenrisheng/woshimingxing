@@ -281,23 +281,6 @@
                                 <constraint firstAttribute="width" constant="150" id="s1p-OM-sfM"/>
                             </constraints>
                         </imageView>
-                        <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lZc-6p-3aY">
-                            <rect key="frame" x="160" y="0.0" width="320" height="416"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gou.png" translatesAutoresizingMaskIntoConstraints="NO" id="ihz-jb-jrS">
-                                    <rect key="frame" x="110" y="51" width="100" height="98"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                </imageView>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="你的投票已经结束， 决赛结果将在两天内公布， 尽请期待！" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="256" translatesAutoresizingMaskIntoConstraints="NO" id="oZo-Wm-y3n">
-                                    <rect key="frame" x="32" y="190" width="256" height="91"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        </view>
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="centerY" secondItem="7K0-he-tJ9" secondAttribute="centerY" id="3U5-n2-2Ia"/>
@@ -311,15 +294,38 @@
                         <constraint firstAttribute="width" constant="640" id="p8g-Nz-bHC"/>
                     </constraints>
                 </view>
+                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lZc-6p-3aY">
+                    <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gou.png" translatesAutoresizingMaskIntoConstraints="NO" id="ihz-jb-jrS">
+                            <rect key="frame" x="110" y="51" width="100" height="186"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        </imageView>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="你的投票已经结束， 决赛结果将在两天内公布， 尽请期待！" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="256" translatesAutoresizingMaskIntoConstraints="NO" id="oZo-Wm-y3n">
+                            <rect key="frame" x="32" y="190" width="256" height="91"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="320" id="CN9-iU-xZU"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="RGs-GH-G9U" secondAttribute="bottom" id="1K0-w0-eGu"/>
+                <constraint firstAttribute="bottom" secondItem="lZc-6p-3aY" secondAttribute="bottom" id="7Oc-XO-21v"/>
                 <constraint firstItem="1Xv-NT-e9w" firstAttribute="top" secondItem="1" secondAttribute="top" id="9PX-JA-8vG"/>
                 <constraint firstItem="1Xv-NT-e9w" firstAttribute="top" secondItem="1" secondAttribute="top" id="C0P-Cz-wkH"/>
                 <constraint firstItem="1Xv-NT-e9w" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="UQm-cR-YaR"/>
                 <constraint firstItem="1Xv-NT-e9w" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="Z24-ba-HMW"/>
+                <constraint firstItem="lZc-6p-3aY" firstAttribute="top" secondItem="1" secondAttribute="top" constant="64" id="bnJ-FR-kOG"/>
                 <constraint firstItem="RGs-GH-G9U" firstAttribute="top" secondItem="1" secondAttribute="top" constant="64" id="eu2-9B-S9Y"/>
+                <constraint firstItem="lZc-6p-3aY" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="tC4-E4-Hsv"/>
                 <constraint firstItem="RGs-GH-G9U" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="-160" id="um0-cz-zU4"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>

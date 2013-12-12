@@ -34,11 +34,12 @@
 }
 -(void)viewWillAppear:(BOOL)animated{
  
-    
+    [super viewWillAppear:animated];
+     [self HideTabBar:YES];
     MainViewController *mainVC=(MainViewController *)self.tabBarController;
     UIView *tabBarView=mainVC.tabBarView;
     tabBarView.frame=CGRectMake(0, UIScreenHeight-TabBarViewHight, tabBarView.frame.size.width,TabBarViewHight);
-    [super viewWillAppear:animated];
+    
 }
 - (void)didReceiveMemoryWarning
 {
