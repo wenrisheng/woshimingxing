@@ -30,13 +30,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-  
+   
 }
 -(void)viewWillAppear:(BOOL)animated{
-    self.hidesBottomBarWhenPushed=YES;
+ 
     
     MainViewController *mainVC=(MainViewController *)self.tabBarController;
-    
     UIView *tabBarView=mainVC.tabBarView;
     tabBarView.frame=CGRectMake(0, UIScreenHeight-TabBarViewHight, tabBarView.frame.size.width,TabBarViewHight);
     [super viewWillAppear:animated];

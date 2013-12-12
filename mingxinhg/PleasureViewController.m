@@ -44,7 +44,7 @@
       _collectionView1.tag=Dongtai;
     [_collectionView2 registerClass:[GuanzhuCell class] forCellWithReuseIdentifier:@"guanzhuCell"];
     _collectionView2.tag=Guanzhu;
-    self.hidesBottomBarWhenPushed=YES;
+   
     
     [_publicDynaticButton setEnlargeEdge:ButtonEnargeEdge];
 }

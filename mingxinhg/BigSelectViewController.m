@@ -11,6 +11,7 @@
 #import "MainViewController.h"
 #import "UIView+toCircle.h"
 #import "ProfileViewController.h"
+
 @interface BigSelectViewController ()
 
 @end
@@ -45,7 +46,7 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     if (!_isFirstVC) {
-        self.hidesBottomBarWhenPushed=YES;
+      //  self.hidesBottomBarWhenPushed=YES;
         MainViewController *mainVC=(MainViewController *)self.tabBarController;
 
         UIView *tabBarView=mainVC.tabBarView;
@@ -110,6 +111,9 @@
     if (totalNum>0) {
         totalNum--;
         _piaoshuLabel.text=[NSString stringWithFormat:@"%d",totalNum];
+    }
+    if (totalNum<=0) {
+        [UIAlertView showMessageWithTitle:Nil message:@"您今天的票数已投完，敬请期待明天投票！" timeInterval:1];
     }
     int actullIndex=currentIndex%8;
     [UIView beginAnimations:nil context:nil];

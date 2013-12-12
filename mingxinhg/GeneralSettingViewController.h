@@ -10,4 +10,6 @@
 
 @interface GeneralSettingViewController : BaseViewController
 
+- (IBAction)backAction:(id)sender;
+@property (retain, nonatomic) IBOutlet UIButton *backButton;
 @end

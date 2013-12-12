@@ -67,7 +67,7 @@
                     </constraints>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head_5.png" translatesAutoresizingMaskIntoConstraints="NO" id="W1Z-b2-J8F">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head_5.png" translatesAutoresizingMaskIntoConstraints="NO" id="W1Z-b2-J8F">
                     <rect key="frame" x="0.0" y="64" width="320" height="359"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>

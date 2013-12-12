@@ -24,7 +24,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        headImageArray=[[NSArray alloc]initWithObjects:@"head_0.png",@"head_1.png",@"head_2.png",@"head_3.png",@"head_4.png",@"head_5.png",@"head_6.png",@"head_7.png", nil];
+        headImageArray=[[NSArray alloc]initWithObjects:@"12-01.jpg",@"12-02.jpg",@"12-03.jpg",@"12-04.jpg",@"12-05.jpg",@"12-06.jpg",@"12-01.jpg",@"12-02.jpg", nil];
         middleImageArray=[[NSArray alloc]initWithObjects:@"middle_0.png",@"middle_1.png",@"middle_2.png",@"middle_3.png",@"middle_4.png",@"middle_5.png",@"middle_6.png",@"middle_7.png", nil];
         nameArray=[[NSArray alloc]initWithObjects:@"annie",@"张小妹",@"路红",@"彩霞",@"Jone",@"小龙女",@"Kate",@"夏利", nil];
         
@@ -32,6 +32,7 @@
         currentPosition=MidPosition;
         
         currentTouPiaoNum=0;
+        isPlayingAudio=NO;
     }
     return self;
 }
@@ -44,8 +45,8 @@
     [_backButton setEnlargeEdge:ButtonEnargeEdge];
     
     //视频通知
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(didPlayMovieFinish:) name:MPMoviePlayerPlaybackDidFinishNotification object:moviePlayer];
-    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(playMovieDidFinish:) name:MPMoviePlayerPlaybackDidFinishNotification object:moviePlayerViewController];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(playMovieDidFinish:) name:MPMoviePlayerDidExitFullscreenNotification object:moviePlayerViewController];
     /////////////////////////
 }
 -(void)viewWillAppear:(BOOL)animated{
@@ -56,15 +57,6 @@
     UIView *tabBarView=mainVC.tabBarView;
     tabBarView.frame=CGRectMake(0, UIScreenHeight, tabBarView.frame.size.width, tabBarView.frame.size.height);
     [super viewWillAppear:animated];
-}
--(void)viewWillDisappear:(BOOL)animated{
-    self.hidesBottomBarWhenPushed=NO;
-    
-    MainViewController *mainVC=(MainViewController *)self.tabBarController;
-    
-    UIView *tabBarView=mainVC.tabBarView;
-    tabBarView.frame=CGRectMake(0, UIScreenHeight-TabBarViewHight, tabBarView.frame.size.width,TabBarViewHight);
-    [super viewWillDisappear:animated];
 }
 
 - (void)didReceiveMemoryWarning
@@ -96,6 +88,8 @@
     [_rightNameLabel release];
     [_toupiaoEndView release];
     [_backButton release];
+    [_leftImageView release];
+    [_rightImageView release];
     [super dealloc];
 }
 
@@ -103,8 +97,12 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (IBAction)buttonTouchDown:(id)sender {
+    [sender setBackgroundColor:[UIColor grayColor]];
+}
+
 - (IBAction)leftButtonAction:(id)sender {
-    
+    [sender setBackgroundColor:[UIColor clearColor]];
     
     if (currentPosition==MidPosition) {
         currentPosition=LeftPosition;
@@ -121,7 +119,7 @@
 }
 
 - (IBAction)rightButtonAction:(id)sender {
-    
+       [sender setBackgroundColor:[UIColor clearColor]];
     if (currentPosition==MidPosition) {
         currentPosition=RightPosition;
         [self showContentOfPositionWihtAnimation];
@@ -182,19 +180,24 @@
 
 - (IBAction)vedioAction:(id)sender {
     if (currentPosition==LeftPosition) {
-        NSString *moviePath=[[NSBundle mainBundle ]pathForResource:@"MTV" ofType:@"mp4"];
-        moviePlayer=[[MPMoviePlayerController alloc]initWithContentURL:[NSURL fileURLWithPath:moviePath]];;
-        moviePlayer.fullscreen=YES;
-        moviePlayer.view.frame=self.view.bounds;
-        [moviePlayer play];
-        [self.view addSubview:moviePlayer.view];
+       
         
     }if (currentPosition==RightPosition) {
-        
+          }
+    NSString *moviePath=[[NSBundle mainBundle ]pathForResource:@"MTV" ofType:@"mp4"];
+     moviePlayerViewController=[[MPMoviePlayerViewController alloc]initWithContentURL:[NSURL fileURLWithPath:moviePath]];;
+    if (isPlayingAudio) {
+        [self stopPlayAudio];
     }
+    [self presentMoviePlayerViewControllerAnimated:moviePlayerViewController];
+    
     
 }
+-(void)stopPlayAudio{
 
+    [moviePlayer.view removeFromSuperview];
+    [moviePlayer release];
+}
 - (IBAction)audioAction:(id)sender {
     UIButton *button=(UIButton *)sender;
     UIView *superView=button.superview;
@@ -219,13 +222,27 @@
     moviePlayer.view.layer.cornerRadius=5;
     [_mainView addSubview:moviePlayer.view];
     [moviePlayer play];
+    isPlayingAudio=YES;
 }
 
 #pragma mark - 视频通知
--(void)didPlayMovieFinish:(NSNotification *)notification{
-    MPMoviePlayerController *player=[notification object];
-    [player.view removeFromSuperview];
-    [player release];
+-(void)playMovieDidFinish:(NSNotification *)notification{
+    NSLog(@"playMovieDidFinish");
+    id movie=[notification object];
+    if ([movie isKindOfClass:[MPMoviePlayerViewController class]]) {
+        
+    MPMoviePlayerViewController *moviePlayerVC=movie;
+   [moviePlayerVC dismissViewControllerAnimated:YES completion:^{
+   }];
+    [moviePlayerVC release];
+        
+         }
+    if ([movie isKindOfClass:[MPMoviePlayerViewController class]]) {
+        MPMoviePlayerController *control=movie;
+        [control.view removeFromSuperview];
+        [control release];
+        isPlayingAudio=NO;
+    }
 }
 - (IBAction)leftToupiaoAction:(id)sender {
     currentPosition=MidPosition;
@@ -286,13 +303,16 @@
                 switch (position) {
                     case LeftPosition:
                     {
-                        [_leftButton setBackgroundImage:[UIImage imageNamed:[headImageArray objectAtIndex:imageIndex]] forState:UIControlStateNormal];
+                        
+                        _leftImageView.image=[UIImage imageNamed:[headImageArray objectAtIndex:imageIndex]];
+                     //   [_leftButton setBackgroundImage:[UIImage imageNamed:[headImageArray objectAtIndex:imageIndex]] forState:UIControlStateNormal];
                         _leftNameLabel.text=[nameArray objectAtIndex:imageIndex];
                     }
                         break;
                     case RightPosition:
                     {
-                        [_rightButton setBackgroundImage:[UIImage imageNamed:[headImageArray objectAtIndex:imageIndex]] forState:UIControlStateNormal];
+                                                _rightImageView.image=[UIImage imageNamed:[headImageArray objectAtIndex:imageIndex]];
+                    //    [_rightButton setBackgroundImage:[UIImage imageNamed:[headImageArray objectAtIndex:imageIndex]] forState:UIControlStateNormal];
                         _rightNameLabel.text=[nameArray objectAtIndex:imageIndex];
                     }
                         break;

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "UIButton+EnlargeEdge.h"
+#import "UIAlertView+ShowShortMessage.h"
 @interface BaseViewController : UIViewController
-
+- (void)HideTabBar:(BOOL)hidden;
 @end

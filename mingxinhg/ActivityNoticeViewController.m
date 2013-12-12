@@ -20,7 +20,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        bigImageNameArray=[[NSArray alloc]initWithObjects:@"head_0.png",@"head_1.png",@"head_2.png",@"head_3.png",@"head_4.png",@"head_5.png",@"head_6.png",@"head_7.png", nil];
+        bigImageNameArray=[[NSArray alloc]initWithObjects:@"qqq-01",@"qqq-02",@"qqq-03",@"qqq-01",@"qqq-02",@"qqq-03",@"qqq-01",@"qqq-02",@"qqq-03", nil];
         
         isLeft=YES;
     }
@@ -38,7 +38,7 @@
     [self.collectionView registerNib:cellNib forCellWithReuseIdentifier:@"ActivityNoticeCell"];
 }
 -(void)viewWillAppear:(BOOL)animated{
-    self.hidesBottomBarWhenPushed=YES;
+   // self.hidesBottomBarWhenPushed=YES;
     
     MainViewController *mainVC=(MainViewController *)self.tabBarController;
     
@@ -46,15 +46,7 @@
     tabBarView.frame=CGRectMake(0, UIScreenHeight, tabBarView.frame.size.width, tabBarView.frame.size.height);
     [super viewWillAppear:animated];
 }
-//-(void)viewWillDisappear:(BOOL)animated{
-//   
-//    
-//    MainViewController *mainVC=(MainViewController *)self.tabBarController;
-//    
-//    UIView *tabBarView=mainVC.tabBarView;
-//    tabBarView.frame=CGRectMake(0, UIScreenHeight-TabBarViewHight, tabBarView.frame.size.width,TabBarViewHight);
-//    [super viewWillDisappear:animated];
-//}
+
 
 - (void)didReceiveMemoryWarning
 {

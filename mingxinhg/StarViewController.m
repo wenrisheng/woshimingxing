@@ -59,7 +59,7 @@
     
 }
 -(void)tapAction:(id)sender{
-    [_jingcaiView removeFromSuperview];
+    _jingcaiView.alpha=0;
 }
 -(void)viewWillAppear:(BOOL)animated{
     self.hidesBottomBarWhenPushed=YES;
@@ -204,7 +204,7 @@
         _jingcaiNumberLabel.textColor=cell.numberTypeLabel.textColor;
         _jingcaiNumberLabel.text=cell.numberLabel.text;
         self.jingcaiView.center=self.view.center;
-        [self.view addSubview:self.jingcaiView];
+        self.jingcaiView.alpha=1;
     }else{
         
     }
@@ -271,7 +271,7 @@
 }
 
 - (IBAction)jingcaiButtonAction:(id)sender {
-        [_jingcaiView removeFromSuperview];
+    _jingcaiView.alpha=0;
 }
 - (IBAction)button2Action:(id)sender {
     _buttonbgView.frame=CGRectMake(80, _buttonbgView.frame.origin.y, _buttonbgView.frame.size.width, _buttonbgView.frame.size.height);
@@ -298,7 +298,7 @@
     _label1.textColor=[UIColor redColor];
 }
 - (IBAction)cancelJingcanAction:(id)sender {
-    [_jingcaiView removeFromSuperview];
+    _jingcaiView.alpha=0;
 }
 
 - (IBAction)confirmJingcaiAction:(id)sender {

@@ -38,10 +38,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [_personImageView toCircle];
+    _personLabel.layer.cornerRadius=6;
 
 }
 -(void)viewWillAppear:(BOOL)animated{
-      self.hidesBottomBarWhenPushed=YES;
+
     
     MainViewController *mainVC=(MainViewController *)self.tabBarController;
     

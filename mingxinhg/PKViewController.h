@@ -29,8 +29,10 @@ typedef enum Position Position;
     int currentIndex;
     
     MPMoviePlayerController *moviePlayer;
+    MPMoviePlayerViewController *moviePlayerViewController;
     AVAudioPlayer *audioPlayer;
     
+    BOOL isPlayingAudio;
     int currentTouPiaoNum;
 }
 @property (retain, nonatomic) IBOutlet UIView *mainView;
@@ -48,6 +50,13 @@ typedef enum Position Position;
 
 - (IBAction)backAction:(id)sender;
 @property (retain, nonatomic) IBOutlet UIButton *backButton;
+
+@property (retain, nonatomic) IBOutlet UIImageView *leftImageView;
+@property (retain, nonatomic) IBOutlet UIImageView *rightImageView;
+
+- (IBAction)buttonTouchDown:(id)sender;
+
+
 
 - (IBAction)leftButtonAction:(id)sender;
 - (IBAction)rightButtonAction:(id)sender;

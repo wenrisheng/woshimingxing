@@ -26,7 +26,7 @@
         // Custom initialization
         imageNameArray=[[NSArray alloc]initWithObjects:@"head_2.png",@"head_3.png",@"head_4.png",@"head_5.png",@"head_6.png",@"head_7.png", @"head_0.png",@"head_1.png",nil];
         vedioNameArray=[[NSArray alloc]initWithObjects:@"head_0.png",@"head_1.png",@"head_2.png",@"head_3.png",@"head_4.png",@"head_5.png",@"head_6.png",@"head_7.png", nil];
-        contentArray=[[NSArray alloc]initWithObjects:@"head_0.png",@"head_1.png",@"head_2.png",@"head_3.png",@"head_4.png",@"head_5.png",@"head_6.png",@"head_7.png", nil];
+        contentArray=[[NSArray alloc]initWithObjects:@"素颜照",@"素颜照",@"素颜照",@"素颜照",@"素颜照",@"素颜照",@"素颜照",@"素颜照",@"素颜照",@"素颜照", nil];
         xingArray=[[NSArray alloc]initWithObjects:@"12",@"12",@"12",@"12",@"12",@"12",@"12",@"12", nil];
         infoArray=[[NSArray alloc]initWithObjects:@"12",@"12",@"12",@"12",@"12",@"12",@"12",@"12", nil];
         currentPosition=ImagePosition;
@@ -59,7 +59,7 @@
     
     //视频通知
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(didPlayMovieFinish:) name:MPMoviePlayerPlaybackDidFinishNotification object:moviePlayer];
-        [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(didPlaybackDidFinishReasonUserInfoKey:) name:MPMoviePlayerPlaybackDidFinishReasonUserInfoKey object:moviePlayer];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(didPlayMovieFinish:) name:MPMoviePlayerDidExitFullscreenNotification object:moviePlayer];
 }
 -(void)didPlaybackDidFinishReasonUserInfoKey:(MPMoviePlayerController *)mp{
     NSLog(@"MPMoviePlayerPlaybackDidFinishReasonUserInfoKey");

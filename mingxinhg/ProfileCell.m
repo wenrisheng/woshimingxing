@@ -16,6 +16,7 @@
     if (self) {
         // Initialization code
         _personImageView=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 90, 60)];
+        _personImageView.contentMode=UIViewContentModeScaleAspectFill;
         _playImageView=[[UIImageView alloc]initWithFrame:CGRectMake(23, 7, 45,45)];
         _bgView=[[UIView alloc]initWithFrame:CGRectMake(0, 60, 90, 30)];
         [_bgView setBackgroundColor:[UIColor blackColor]];

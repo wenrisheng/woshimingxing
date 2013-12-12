@@ -38,7 +38,7 @@ typedef enum ResourceSource ResourceSource;
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-       
+      //  UIImageWriteToSavedPhotosAlbum([UIImage imageNamed:@"back"], Nil, Nil, Nil);
           }
     return self;
 }
@@ -112,6 +112,7 @@ typedef enum ResourceSource ResourceSource;
                   
                     imagePickerController=[[UIImagePickerController alloc]init];
                     imagePickerController.delegate=self;
+                    imagePickerController.allowsEditing=YES;
                     imagePickerController.sourceType=UIImagePickerControllerSourceTypePhotoLibrary;
                     imagePickerController.modalTransitionStyle=UIModalTransitionStyleCoverVertical;
                     [self presentViewController:imagePickerController animated:YES completion:^{
@@ -155,6 +156,8 @@ typedef enum ResourceSource ResourceSource;
                         return;
                         
                     }
+                    imagePickerController.allowsEditing=YES;
+
                     imagePickerController=[[UIImagePickerController alloc]init];
                     imagePickerController.delegate=self;
                     imagePickerController.sourceType=UIImagePickerControllerSourceTypeCamera;
@@ -337,7 +340,7 @@ typedef enum ResourceSource ResourceSource;
         
         //获取用户编辑之后的图像
         
-        UIImage* image = [info objectForKey:UIImagePickerControllerOriginalImage];
+        UIImage* image = [info objectForKey:UIImagePickerControllerEditedImage];
         
         //将该图像保存到媒体库中
         image=[UIImage imageWithImageSimple:image scaledToSize:CGSizeMake(120.0, 120.0)];

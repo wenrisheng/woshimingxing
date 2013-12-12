@@ -66,6 +66,7 @@
 }
 #pragma mark - 视频通知
 -(void)didPlayMovieFinish:(NSNotification *)notification{
+    NSLog(@"didPlayMovieFinish");
     MPMoviePlayerController *player=[notification object];
     [player.view removeFromSuperview];
     [player release];
