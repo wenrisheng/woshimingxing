@@ -32,7 +32,7 @@
 
     [_personImageView toCircle];
     _editorButton.layer.borderColor=[[UIColor redColor] CGColor];
-    _editorButton.layer.borderWidth=2;
+    _editorButton.layer.borderWidth=1;
     _editorButton.layer.cornerRadius=8;
     
      [_backButton setEnlargeEdge:ButtonEnargeEdge];

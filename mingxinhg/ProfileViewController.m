@@ -24,8 +24,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        imageNameArray=[[NSArray alloc]initWithObjects:@"head_2.png",@"head_3.png",@"head_4.png",@"head_5.png",@"head_6.png",@"head_7.png", @"head_0.png",@"head_1.png",nil];
-        vedioNameArray=[[NSArray alloc]initWithObjects:@"head_0.png",@"head_1.png",@"head_2.png",@"head_3.png",@"head_4.png",@"head_5.png",@"head_6.png",@"head_7.png", nil];
+        imageNameArray=[[NSArray alloc]initWithObjects:@"1.png",@"3.png",@"4.png",@"5.png",@"6.png",@"7.png", @"8.png",@"2.png",nil];
+        vedioNameArray=[[NSArray alloc]initWithObjects:@"1.png",@"3.png",@"4.png",@"5.png",@"6.png",@"7.png", @"8.png",@"2.png", nil];
         contentArray=[[NSArray alloc]initWithObjects:@"素颜照",@"素颜照",@"素颜照",@"素颜照",@"素颜照",@"素颜照",@"素颜照",@"素颜照",@"素颜照",@"素颜照", nil];
         xingArray=[[NSArray alloc]initWithObjects:@"12",@"12",@"12",@"12",@"12",@"12",@"12",@"12", nil];
         infoArray=[[NSArray alloc]initWithObjects:@"12",@"12",@"12",@"12",@"12",@"12",@"12",@"12", nil];

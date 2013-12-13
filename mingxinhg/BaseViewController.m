@@ -38,8 +38,8 @@
 }
 - (void)HideTabBar:(BOOL)hidden{
     
-    self.tabBarController.tabBar.hidden=YES;
-    self.hidesBottomBarWhenPushed=YES;
+//    self.tabBarController.tabBar.hidden=YES;
+//    self.hidesBottomBarWhenPushed=YES;
     
     [UIView beginAnimations:nil context:NULL];
     
@@ -49,13 +49,10 @@
         if([view isKindOfClass:[UITabBar class]]){   //处理UITabBar视图
             
             if (hidden) {
-                [view setFrame:CGRectMake(view.frame.origin.x, UIScreenHeight, view.frame.size.width,view.frame.size.height)];
-                
-            } else {
-                
-            //    [view setFrame:CGRectMake(view.frame.origin.x,UIScreenHeight-48, view.frame.size.width,view.frame.size.height)];
-                
-            }       
+                [view setFrame:CGRectMake(view.frame.origin.x, 600, view.frame.size.width,view.frame.size.height)];
+                NSLog(@"隐藏系统tabbar");
+
+            }
         }else{   //处理其它视图
     }
     

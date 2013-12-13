@@ -43,7 +43,7 @@
 }
 -(void)viewWillAppear:(BOOL)animated{
    [super viewWillAppear:animated];
-    self.hidesBottomBarWhenPushed=YES;
+
     [self HideTabBar:YES];
     MainViewController *mainVC=(MainViewController *)self.tabBarController;
     

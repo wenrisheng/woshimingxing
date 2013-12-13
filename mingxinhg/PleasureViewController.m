@@ -25,7 +25,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        imageNameArray=[[NSArray alloc]initWithObjects:@"head_0.png",@"head_1.png",@"head_2.png",@"head_3.png",@"head_4.png",@"head_5.png",@"head_6.png",@"head_7.png", nil];
+        personImageNameArray=[[NSArray alloc]initWithObjects:@"head_0.png",@"head_1.png",@"head_2.png",@"head_3.png",@"head_4.png",@"head_5.png",@"head_6.png",@"head_7.png", nil];
+        imageNameArray=[[NSArray alloc]initWithObjects:@"11.png",@"22.png",@"33.png",@"44.png",@"55.png",@"66.png",@"77.png",@"88.png", nil];
         nameArray=[[NSArray alloc]initWithObjects:@"ANNIE",@"kate",@"倩倩",@"小妹",@"李莉",@"Joke",@"贲贲",@"Jim", nil];
         genderArray=[[NSArray alloc]initWithObjects:@"女",@"女",@"女",@"男",@"男",@"女",@"女",@"女", nil];
         ageArray=[[NSArray alloc]initWithObjects:@"23", @"21",@"20",@"18",@"29",@"16",@"26",@"23",nil];
@@ -47,16 +48,19 @@
    
     
     [_publicDynaticButton setEnlargeEdge:ButtonEnargeEdge];
+    
+    
+        self.hidesBottomBarWhenPushed=YES;
 }
 -(void)viewWillAppear:(BOOL)animated{
-      self.tabBarController.tabBar.hidden=YES;
+    
         [super viewWillAppear:animated];
-    [self HideTabBar:YES];
+   
     MainViewController *mainVC=(MainViewController *)self.tabBarController;
     
     UIView *tabBarView=mainVC.tabBarView;
     tabBarView.frame=CGRectMake(0, UIScreenHeight-TabBarViewHight, tabBarView.frame.size.width,TabBarViewHight);
-
+ [self HideTabBar:YES];
 }
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
@@ -69,6 +73,7 @@
 }
 
 - (void)dealloc {
+    [personImageNameArray release];
     [imageNameArray release];
     [nameArray release];
     [genderArray release];
@@ -133,7 +138,7 @@
         {
              static NSString *identify=@"dongtaicell";
             DongtaiCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:identify forIndexPath:indexPath];
-            cell.personImageView.image=[UIImage imageNamed:[imageNameArray objectAtIndex:row]];
+            cell.personImageView.image=[UIImage imageNamed:[personImageNameArray objectAtIndex:row]];
             cell.timeLabel.text=@"13:02:12  15分钟前";
             cell.xingLabel.text=@"231";
             cell.infoLabel.text=@"421";
@@ -147,7 +152,7 @@
         {
             static NSString *identify=@"guanzhuCell";
             GuanzhuCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:identify forIndexPath:indexPath];
-            cell.personImageView.image=[UIImage imageNamed:[imageNameArray objectAtIndex:indexPath.row]];
+            cell.personImageView.image=[UIImage imageNamed:[personImageNameArray objectAtIndex:indexPath.row]];
             if (indexPath.row%2==0) {
                 cell.vImageView.image=[UIImage imageNamed:@"pxing"];
             }

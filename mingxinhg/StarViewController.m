@@ -55,17 +55,18 @@
     tapGesture.numberOfTapsRequired=1;
     [_jingcaiBgView addGestureRecognizer:tapGesture];
     [tapGesture release];
-
+    
+    self.hidesBottomBarWhenPushed=YES;
 }
 -(void)viewWillAppear:(BOOL)animated{
-      self.tabBarController.tabBar.hidden=YES;
+
      [super viewWillAppear:animated];
-     [self HideTabBar:YES];
+   
     MainViewController *mainVC=(MainViewController *)self.tabBarController;
     
     UIView *tabBarView=mainVC.tabBarView;
     tabBarView.frame=CGRectMake(0, UIScreenHeight-TabBarViewHight, tabBarView.frame.size.width,TabBarViewHight);
-   
+    [self HideTabBar:YES];
 }
 -(void)tapAction:(id)sender{
     _jingcaiView.alpha=0;
@@ -321,4 +322,5 @@
     _label3.textColor=[UIColor redColor];
     _label4.textColor=[UIColor redColor];
 }
+
 @end

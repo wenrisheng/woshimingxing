@@ -17,6 +17,7 @@ typedef enum PositionStatus PositionStatus;
 
 @interface PleasureViewController : BaseViewController<UICollectionViewDataSource,UICollectionViewDelegate,UITableViewDataSource,UITableViewDelegate>
 {
+    NSArray *personImageNameArray;
     NSArray *imageNameArray;
     NSArray *nameArray;
     NSArray *genderArray;

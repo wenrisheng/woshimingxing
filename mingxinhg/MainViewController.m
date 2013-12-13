@@ -30,7 +30,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.tabBar.hidden=YES;
+    
+  //  self.tabBar.hidden=YES;
     
     [self initViewControllers];
     [self initTabBarView];

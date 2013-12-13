@@ -52,7 +52,7 @@
         UIView *tabBarView=mainVC.tabBarView;
         tabBarView.frame=CGRectMake(0, UIScreenHeight, tabBarView.frame.size.width, tabBarView.frame.size.height);
     }
-
+    [self HideTabBar:YES];
 
     [super viewWillAppear:animated];
 }

@@ -71,7 +71,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="12-01.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="VL8-Zs-pnB">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="111.png" translatesAutoresizingMaskIntoConstraints="NO" id="VL8-Zs-pnB">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <constraints>
@@ -174,7 +174,7 @@
                             <rect key="frame" x="320" y="0.0" width="320" height="504"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="12-05.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1Ge-bq-LyT">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="222.png" translatesAutoresizingMaskIntoConstraints="NO" id="1Ge-bq-LyT">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <constraints>
@@ -333,14 +333,18 @@
         </view>
     </objects>
     <resources>
-        <image name="12-01.jpg" width="1333" height="2100"/>
-        <image name="12-05.jpg" width="1333" height="2100"/>
+        <image name="111.png" width="320" height="504"/>
+        <image name="222.png" width="320" height="504"/>
         <image name="back.png" width="229" height="229"/>
         <image name="gou.png" width="759" height="759"/>
         <image name="pk.png" width="1583" height="1583"/>
         <image name="toubg.png" width="958" height="354"/>
+        <image name="toubg.png" width="958" height="354"/>
+        <image name="ttt-33.png" width="417" height="417"/>
         <image name="ttt-33.png" width="417" height="417"/>
         <image name="ttt-34.png" width="417" height="417"/>
+        <image name="ttt-34.png" width="417" height="417"/>
+        <image name="ttt-35.png" width="417" height="417"/>
         <image name="ttt-35.png" width="417" height="417"/>
     </resources>
 </document>

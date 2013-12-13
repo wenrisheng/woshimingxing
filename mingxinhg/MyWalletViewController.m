@@ -33,6 +33,7 @@
 -(void)viewDidAppear:(BOOL)animated{
     _scrollView.contentSize=CGSizeMake(320*4, _scrollView.frame.size.height);
     [super viewDidAppear:animated];
+      _scrollView.contentSize=CGSizeMake(320*4, _scrollView.frame.size.height);
 }
 #pragma mark - scrollview delegate
 - (void)scrollViewDidScroll:(UIScrollView *)sender {

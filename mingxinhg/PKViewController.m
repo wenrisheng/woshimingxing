@@ -24,8 +24,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        headImageArray=[[NSArray alloc]initWithObjects:@"12-01.jpg",@"12-02.jpg",@"12-03.jpg",@"12-04.jpg",@"12-05.jpg",@"12-06.jpg",@"12-01.jpg",@"12-02.jpg", nil];
-        middleImageArray=[[NSArray alloc]initWithObjects:@"middle_0.png",@"middle_1.png",@"middle_2.png",@"middle_3.png",@"middle_4.png",@"middle_5.png",@"middle_6.png",@"middle_7.png", nil];
+        headImageArray=[[NSArray alloc]initWithObjects:@"111",@"222",@"333",@"444",@"555",@"666",@"777",@"888", nil];
+    //    middleImageArray=[[NSArray alloc]initWithObjects:@"middle_0.png",@"middle_1.png",@"middle_2.png",@"middle_3.png",@"middle_4.png",@"middle_5.png",@"middle_6.png",@"middle_7.png", nil];
         nameArray=[[NSArray alloc]initWithObjects:@"annie",@"张小妹",@"路红",@"彩霞",@"Jone",@"小龙女",@"Kate",@"夏利", nil];
         
         currentIndex=0;

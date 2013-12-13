@@ -82,6 +82,9 @@
     RecordAudioViewController *recordVC=[[RecordAudioViewController alloc]init];
    // MeViewController *test=[[MeViewController alloc]init];
       // UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:rooNav];
+  
+    
+    
     self.window.rootViewController=rooNav;
     [rooNav release];
     return YES;
